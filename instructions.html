@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:10 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#333">
+<title>Eenadu-online Exam</title>
+<meta name="description" content="Material Style Theme">
+<!--<link rel="shortcut icon" href="img/favicon30f4.png?v=3">-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/preload.min.css">
+<link rel="stylesheet" href="css/plugins.min.css">
+<link rel="stylesheet" href="css/style.light-blue-500.min.css">
+<link rel="stylesheet" href="css/width-boxed.min.css" id="ms-boxed" disabled="">
+<link rel="stylesheet" href="css/custom.css">
+<!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!----theme color setting-------> 
+<a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand"><i class="fa fa-gears"></i></a>
+<div id="ms-configurator" class="ms-configurator">
+  <div class="ms-configurator-title">
+    <h3><i class="fa fa-gear"></i> Theme Configurator</h3>
+    <a href="javascript:void(0);" class="ms-conf-btn withripple"><i class="zmdi zmdi-close"></i></a> </div>
+  <div class="panel-group" id="accordion_conf" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-headers">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-collapse-conf-2" aria-expanded="false" aria-controls="ms-collapse-conf-2"> <i class="zmdi zmdi-view-compact"></i> Header Styles </a> </h4>
+      </div>
+      <div id="ms-collapse-conf-2" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-headers" data-parent="#accordion_conf">
+        <div class="panel-body"> 
+          <!--<h5>Preset Options</h5>
+                    <form class="form-inverse ms-conf-radio">
+                        <div class="form-group">
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Default Style
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Pure Material
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Navbar Mode
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <h5>Custom Header</h5>-->
+          <h6>Header Options</h6>
+          <form class="form-inverse ms-conf-radio" id="header-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="whiteHeader" value="white" checked="cheked">
+                  Light Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="primaryHeader" value="primary">
+                  Primary Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="darkHeader" value="dark">
+                  Dark Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="noHeader" value="hidden">
+                  No Header (Navbar Mode) </label>
+              </div>
+            </div>
+          </form>
+          <h6>Navbar Options</h6>
+          <form class="form-inverse ms-conf-radio" id="navbar-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="whiteNavbar" value="white" checked="">
+                  Light Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="primaryNavbar" value="primary">
+                  Primary Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="darkNavbar" value="dark">
+                  Dark Color </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-container">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-conf-collapse-3" aria-expanded="false" aria-controls="ms-conf-collapse-3"> <i class="zmdi zmdi-grid"></i> Container Options </a> </h4>
+      </div>
+      <div id="ms-conf-collapse-3" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-container" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <form class="form-inverse ms-conf-radio" id="boxed-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="fullWidth" value="full" checked="">
+                  Full Width </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="boxedWidth" value="boxed">
+                  Boxed Mode </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----theme color setting end-------> 
+
+<!---------------model login------------------->
+<div id="ms-preload" class="ms-preload">
+  <div id="status">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+</div>
+<div class="ms-site-container"> 
+  <!-- Modal -->
+  <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-block shadow-2dp no-pb">
+          <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+          <div class="modal-title text-center"> <span class="ms-logo ms-logo-white ms-logo-sm mr-1">E</span>
+            <h3 class="no-m ms-site-title"><span>EENADU</span></h3>
+          </div>
+          <div class="modal-header-tabs">
+            <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+              <li class="nav-item" role="presentation"><a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple"><i class="zmdi zmdi-account"></i> Login</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-account-add"></i> Register</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-key"></i> Recovery Pass</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+              <form autocomplete="off">
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user">Username</label>
+                      <input type="text" id="ms-form-user" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass">Password</label>
+                      <input type="password" id="ms-form-pass" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                      <div class="form-group no-mt">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Remember Me </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-raised btn-primary pull-right">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="text-center">
+                <h3>Login with</h3>
+                <a href="j#" class="wave-effect-light btn btn-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> Facebook</a> <a href="#" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> <a href="#" class="wave-effect-light btn btn-raised btn-google"><i class="zmdi zmdi-google"></i> Google</a> </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+              <form>
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user-r">Username</label>
+                      <input type="text" id="ms-form-user-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                      <label class="control-label" for="ms-form-email-r">Email</label>
+                      <input type="email" id="ms-form-email-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-r">Password</label>
+                      <input type="password" id="ms-form-pass-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-rn">Re-type Password</label>
+                      <input type="password" id="ms-form-pass-rn" class="form-control">
+                    </div>
+                  </div>
+                  <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                </fieldset>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+              <fieldset>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                    <label class="control-label" for="ms-form-user-re">Username</label>
+                    <input type="text" id="ms-form-user-re" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                    <label class="control-label" for="ms-form-email-re">Email</label>
+                    <input type="email" id="ms-form-email-re" class="form-control">
+                  </div>
+                </div>
+                <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+              </fieldset>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------model login end-------------------> 
+  
+  <!---------------header------------------>
+  
+  <header class="ms-header ms-header-primary"> 
+    <!--ms-header-primary-->
+    <div class="container container-full">
+      <div class="ms-title"> <a href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-header.png" alt=""> --> 
+        <span class="ms-logo animated zoomInDown animation-delay-5">E</span>
+        <h1 class="animated fadeInRight animation-delay-6"><span>EENADU</span></h1>
+        </a> </div>
+      <div class="header-right">
+        <div class="share-menu">
+          <ul class="share-menu-list">
+            <li class="animated fadeInRight animation-delay-3"><a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a></li>
+            <li class="animated fadeInRight animation-delay-2"><a href="ja#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-instagram"></i></a></li>
+          </ul>
+          <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7"><i class="zmdi zmdi-share"></i></a> </div>
+        <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal"><i class="zmdi zmdi-account"></i></a>
+        <form class="search-form animated zoomInDown animation-delay-9">
+          <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-menu"></i></a> </div>
+    </div>
+  </header>
+  
+  <!---------------header end------------------> 
+  
+  <!--------------main-menu------------------>
+  <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+    <div class="container container-full">
+      <div class="navbar-header"> <a class="navbar-brand" href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> --> 
+        <span class="ms-logo ms-logo-sm">E</span> <span class="ms-title"><strong>EENADU</strong></span> </a> </div>
+      
+      <a href="#" class="ms-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a> </div>
+    <!-- container --> 
+  </nav>
+    <div id="heading-breadcrumbs">
+    <div class="container">
+      <div class="col-md-4">
+        <h1 class="pull-left">General Instructions</h1>
+      </div>
+      <div class="col-md-3 pull-right">
+        <label style="color:#000;">Choose Your Default Language</label>
+		  <div class="form-group" style="margin:0px;">
+        <select class="form-control" onChange="changeIndtruct(this.value)">
+          <option value="en">English</option>
+			<option value="en">Telugu</option>
+         </select>
+			  </div>
+      </div>
+      <!--<div class="col-md-5">
+            <div class="navbar-collapse">
+              <ul class="nav navbar-nav exam-paper">
+                <li class="user-profile">
+                  <table>
+                    <tr>
+                      <td style="padding: 5px 15px; border: 2px solid #666"><i class="fa fa-user fa-4x"></i></td>
+                      <td><table>
+                          <tr>
+                            <td style="padding: 5px 5px;">Candidate Name</td>
+                            <td> : <span style="color: #f7931e; font-weight: bold">[Your Name]</span></td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 5px 5px;">Subject Name</td>
+                            <td> : <span style="color: #f7931e; font-weight: bold">[Test Practice]</span></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </div>
+          </div>--> 
+    </div>
+  </div>
+	<div class="clearfix"></div>
+  <div class="container">
+	  <div class="ms-paper-content">
+<div class="row">
+  <div class="col-md-12">
+    <div class="instructions">
+      <div class="col-md-12" id="en">
+        <h4 class="text-center">Please read the instructions carefully</h4>
+        <h4><strong><u>General Instructions:</u></strong></h4>
+        <ol>
+          <li>
+            <ul style="padding-left: 20px;">
+              <li>Total duration of JEE Main Paper- 1 &amp; JEE Main Paper- 2 is 180 min.</li>
+              <li>JEE Paper- 2 is for Mathematics, Aptitude Test & Drawing. The Drawing test is required to be done on separate drawing sheet, which is not part of the current mock test.</li>
+            </ul>
+          </li>
+          <li>The clock will be set at the server. The countdown timer in the top right corner of screen will display the remaining time available for you to complete the examination. When the timer reaches zero, the
+            examination will end by itself. You will not be required to end or submit your examination.</li>
+          <li> The Questions Palette displayed on the right side of screen will show the status of each question using one of the following symbols:
+            <ol>
+              <li><img src="cLogo1.png" /> You have not visited the question yet.<br/>
+                <br/>
+              </li>
+              <li><img src="http://172.17.23.135/eenadupratibha/images/onlineexamimgs/Logo2.png" /> You have not answered the question.<br/>
+                <br/>
+              </li>
+              <li><img src="http://172.17.23.135/eenadupratibha/images/onlineexamimgs/Logo3.png" /> You have answered the question.<br/>
+                <br/>
+              </li>
+              <li><img src="http://172.17.23.135/eenadupratibha/images/onlineexamimgs/Logo4.png" /> You have NOT answered the question, but have marked the question for review.<br/>
+                <br/>
+              </li>
+              <li><img src="http://172.17.23.135/eenadupratibha/images/onlineexamimgs/Logo5.png" /> The question(s) "Answered and Marked for Review" will be considered for evalution.<br/>
+                <br/>
+              </li>
+            </ol>
+          </li>
+          <li>You can click on the "&gt;" arrow which apperes to the left of question palette to collapse the question palette thereby maximizing the question window. To view the question palette again, you can click
+            on "&lt;" which appears on the right side of question window.</li>
+          <li>You can click on your "Profile" image on top right corner of your screen to change the language during the exam for entire question paper. On clicking of Profile image you will get a drop-down to change
+            the question content to the desired language.</li>
+          <li>You can click on <img src="http://172.17.23.135/eenadupratibha/images/onlineexamimgs/down.png" /> to navigate to the bottom and <img src="http://172.17.23.135/eenadupratibha/images/onlineexamimgs/up.png" /> to navigate to top of the question are, without scrolling.</li>
+        </ol>
+        <h4><strong><u>Navigating to a Question:</u></strong></h4>
+        <ol start="7">
+          <li> To answer a question, do the following:
+            <ol type="a">
+              <li>Click on the question number in the Question Palette at the right of your screen to go to that numbered question directly. Note that using this option does NOT save your answer to the current question.</li>
+              <li>Click on <strong>Save & Next</strong> to save your answer for the current question and then go to the next question.</li>
+              <li>Click on <strong>Mark for Review & Next</strong> to save your answer for the current question, mark it for review, and then go to the next question.</li>
+            </ol>
+          </li>
+        </ol>
+        <h4><strong><u>Answering a Question:</u></strong></h4>
+        <ol start="8">
+          <li> Procedure for answering a multiple choice type question:
+            <ol type="a">
+              <li>To select you answer, click on the button of one of the options.</li>
+              <li>To deselect your chosen answer, click on the button of the chosen option again or click on the <strong>Clear Response</strong> button</li>
+              <li>To change your chosen answer, click on the button of another option</li>
+              <li>To save your answer, you MUST click on the Save & Next button.</li>
+              <li>To mark the question for review, click on the Mark for Review & Next button.</li>
+            </ol>
+          </li>
+          <li>To change your answer to a question that has already been answered, first select that question for answering and then follow the procedure for answering that type of question.</li>
+        </ol>
+        <h4><strong><u>Navigating through sections:</u></strong></h4>
+        <ol start="10">
+          <li>Sections in this question paper are displayed on the top bar of the screen. Questions in a section can be viewed by click on the section name. The section you are currently viewing is highlighted.</li>
+          <li>After click the Save & Next button on the last question for a section, you will automatically be taken to the first question of the next section.</li>
+          <li>You can shuffle between sections and questions anything during the examination as per your convenience only during the time stipulated.</li>
+          <li>Candidate can view the corresponding section summery as part of the legend that appears in every section above the question palette.</li>
+        </ol>
+        <hr>
+        <hr>
+        <label>
+          <input type="checkbox" id="en_ch" >
+          &nbsp;&nbsp;I have read and understood the instructions. All computer hardware allotted to me are in proper working condition. I declare  that I am not in possession of / not wearing / not  carrying any prohibited gadget like mobile phone, bluetooth  devices  etc. /any prohibited material with me into the Examination Hall.I agree that in case of not adhering to the instructions, I shall be liable to be debarred from this Test and/or to disciplinary action, which may include ban from future Tests / Examinations</label>
+        <hr>
+        <div class="col-md-4 col-md-offset-4 text-center"> <a href="exam.html" class="btn btn-raised btn-info center-block">Proceed</a> </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+	  </div>
+  <!--------------main-menu end------------------> 
+  
+  <!--------------bannerimg------------------> 
+  
+  <!-- ms-hero ms-hero-black --> 
+  
+  <!--------------bannerimg end------------------> 
+  
+  <!---------- Upcoming and Popular Exams ---------------> 
+  
+  <!---------- Popular Courses---------------> 
+  
+  <!-------------------------- What we offer------------------------- --> 
+  
+  <!-------------------cThis is what our students saying.---------------------->
+  
+  <aside class="ms-footbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ms-footer-col">
+          <div class="ms-footbar-block"> 
+            <!-- <h3 class="ms-footbar-title">Sitemap</h3>-->
+            <ul class="list-unstyled ms-icon-list three_cols">
+              <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+              <li><a href="#"><i class="zmdi zmdi-edit"></i>About-Us</a></li>
+              <li><a href="#"><i class="zmdi zmdi-image-o"></i>Doubts</a></li>
+              <li><a href="#"><i class="zmdi zmdi-case"></i>Online Courses</a></li>
+              <li><a href="#"><i class="zmdi zmdi-time"></i>Video Classes</a></li>
+              <li><a href="page-pricing.html"><i class="zmdi zmdi-money"></i> Practice Exams</a></li>
+              <li><a href="#"><i class="zmdi zmdi-help"></i> CSR Policy</a></li>
+              <li><a href="#"><i class="zmdi zmdi-lock"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="zmdi zmdi-email"></i> Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-5 ms-footer-col ms-footer-text-right">
+          <div class="ms-footbar-block"> 
+            <!--<h3 class="ms-footbar-title">Social Media</h3>-->
+            <div class="ms-footbar-social"> <a href="#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a> <a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a> 
+              <!-- <a href="javascript:void(0)" class="btn-circle btn-youtube"><i class="zmdi zmdi-youtube-play"></i></a>--> 
+              <a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a> <a href="#" class="btn-circle btn-instagram"><i class="zmdi zmdi-instagram"></i></a> 
+              <!--<a href="javascript:void(0)" class="btn-circle btn-github"><i class="zmdi zmdi-github"></i></a>--> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-------------------------footer----------------------------->
+  <footer class="ms-footer clearfix">
+    <div class="container">
+      <p class="pull-left">Copyright © 2021 Eenadu All Rights Reserved </p>
+      <p class="pull-right">Powered By Margadarsi Computers</p>
+    </div>
+  </footer>
+  <div class="btn-back-top"> <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised "><i class="zmdi zmdi-long-arrow-up"></i></a> </div>
+</div>
+<!-------------------------------- slidebar menu-------------------------------- -->
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+  <div class="sb-slidebar-container">
+    <header class="ms-slidebar-header">
+      <div class="ms-slidebar-login"> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account"></i> Login</a> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account-add"></i> Register</a> </div>
+      <div class="ms-slidebar-title">
+        <form class="search-form">
+          <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box-slidebar"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <div class="ms-slidebar-t"> <span class="ms-logo ms-logo-sm">E</span>
+          <h3><span>EENADU</span></h3>
+        </div>
+      </div>
+    </header>
+    <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+      <li class="card" role="tab" id="sch1"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1"> <i class="zmdi zmdi-home"></i> Home </a>
+        <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
+          <li><a href="index.html">Default Home</a></li>
+          <li><a href="home-generic-2.html">Home Black Slider</a></li>
+          <li><a href="home-landing.html">Home Landing Intro</a></li>
+          <li><a href="home-landing3.html">Home Landing Video</a></li>
+          <li><a href="home-shop.html">Home Shop 1</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch2"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2"> <i class="zmdi zmdi-desktop-mac"></i> Pages </a>
+        <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2" data-parent="#slidebar-menu">
+          <li><a href="page-about.html">About US</a></li>
+          <li><a href="page-team.html">Our Team</a></li>
+          <li><a href="page-product.html">Products</a></li>
+          <li><a href="page-services.html">Services</a></li>
+          <li><a href="page-faq.html">FAQ</a></li>
+          <li><a href="page-timeline_left.html">Timeline</a></li>
+          <li><a href="page-contact.html">Contact Option</a></li>
+          <li><a href="page-login.html">Login</a></li>
+          <li><a href="page-pricing.html">Pricing</a></li>
+          <li><a href="page-coming.html">Coming Soon</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch4"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc4"> <i class="zmdi zmdi-edit"></i> Blog </a>
+        <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4" data-parent="#slidebar-menu">
+          <li><a href="blog-sidebar.html">Blog Sidebar 1</a></li>
+          <li><a href="blog-sidebar2.html">Blog Sidebar 2</a></li>
+          <li><a href="blog-masonry.html">Blog Masonry 1</a></li>
+          <li><a href="blog-masonry2.html">Blog Masonry 2</a></li>
+          <li><a href="blog-full.html">Blog Full Page 1</a></li>
+          <li><a href="blog-full2.html">Blog Full Page 2</a></li>
+          <li><a href="blog-post.html">Blog Post 1</a></li>
+          <li><a href="blog-post2.html">Blog Post 2</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch5"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5"> <i class="zmdi zmdi-shopping-basket"></i> E-Commerce </a>
+        <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5" data-parent="#slidebar-menu">
+          <li><a href="ecommerce-filters.html">E-Commerce Sidebar</a></li>
+          <li><a href="ecommerce-filters-full.html">E-Commerce Sidebar Full</a></li>
+          <li><a href="ecommerce-filters-full2.html">E-Commerce Topbar Full</a></li>
+          <li><a href="ecommerce-item.html">E-Commerce Item</a></li>
+          <li><a href="ecommerce-cart.html">E-Commerce Cart</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch6"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc6"> <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
+        <ul id="sc6" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch6" data-parent="#slidebar-menu">
+          <li><a href="portfolio-filters_sidebar.html">Portfolio Sidebar Filters</a></li>
+          <li><a href="portfolio-filters_topbar.html">Portfolio Topbar Filters</a></li>
+          <li><a href="portfolio-filters_sidebar_fluid.html">Portfolio Sidebar Fluid</a></li>
+          <li><a href="portfolio-filters_topbar_fluid.html">Portfolio Topbar Fluid</a></li>
+          <li><a href="portfolio-cards.html">Porfolio Cards</a></li>
+          <li><a href="portfolio-masonry.html">Porfolio Masonry</a></li>
+          <li><a href="portfolio-item.html">Portfolio Item 1</a></li>
+          <li><a href="portfolio-item2.html">Portfolio Item 2</a></li>
+        </ul>
+      </li>
+      <li> <a class="link" href="component-typography.html"><i class="zmdi zmdi-view-compact"></i> UI Elements</a> </li>
+      <li> <a class="link" href="page-all.html"><i class="zmdi zmdi-link"></i> All Pages</a> </li>
+    </ul>
+    <div class="ms-slidebar-social ms-slidebar-block">
+      <h4 class="ms-slidebar-block-title">Social Links</h4>
+      <div class="ms-slidebar-social"> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> <span class="badge-pill badge-pill-pink">12</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> <span class="badge-pill badge-pill-pink">4</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google"><i class="zmdi zmdi-google"></i>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram"><i class="zmdi zmdi-instagram"></i>
+        <div class="ripple-container"></div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<script src="js/plugins.min.js"></script> 
+<script src="js/app.min.js"></script> 
+<script src="js/configurator.min.js"></script> 
+<script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script> 
+<script src="js/index.js"></script>
+</body>
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:11 GMT -->
+</html>

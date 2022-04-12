@@ -1,0 +1,475 @@
+@charset "utf-8";
+/* CSS Document */
+/********************upcomming-exam***********************/
+.up-comming {
+  margin: 0 0 15px 0;
+  padding: 10px;
+  background: #fff;
+}
+.up-comming:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+.up-comming img {
+  height: 60px;
+}
+#centrel {
+  margin: 0px;
+  padding: 20px;
+  background:
+    linear-gradient(45deg, rgba(0, 157, 224, 1) 0%, rgba(0, 172, 65, 1) 100%);
+}
+.up-comming h4 {
+  margin: 0px;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+/*************************courses********************/
+.coures-tb {
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px #ccc;
+  background: #fff;
+  clear: both;
+  overflow: hidden;
+}
+.coures-tb span {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+.coures-tb img {
+  height: 49px;
+  width: 49px;
+  margin-right: 16px;
+  float: left;
+}
+
+/******************appsc-css*************************/
+.appsc-banner{
+	margin: 0px;
+	padding: 15px 0 15px 0;
+	background:#0b182f;
+	
+}
+.appsc-title{
+	margin: 0px;
+	padding: 0px;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	
+	
+}
+.appsc-img{
+	height: 70px;
+	width: 70px;
+	
+	
+}
+/******************instuctions-css*************************/
+#heading-breadcrumbs {
+	margin-top: 0px;
+	padding: 10px;
+	background: linear-gradient(0deg, #ececec 0%, #f8f8f8 51%);
+	clear: both;
+	overflow: hidden;
+	font-family: 'arial';
+	margin-bottom: 30px;
+}
+#heading-breadcrumbs h1 {
+    margin-top: 20px;
+    padding: 0px;
+    font-size: 32px;
+    font-family: 'Arial';
+    color: #03a9f4 ;
+    font-weight:normal;
+}
+.instructions h4 {
+    padding: 10px 0 10px 0;
+    font-size: 22px;
+    font-family: 'Arial';
+    color: #000 ;
+    font-weight: normal;
+}
+.instructions {
+    font-size: 15px;
+    color: #000;
+    font-family: 'Arial';
+    line-height: 26px;
+}
+.instructions label {
+    font-size: 15px;
+    color: #000;
+    font-family: 'Arial';
+    line-height: 26px;
+	font-weight: bold;
+}
+/******************group-1 css*************************/
+.card-body h1{
+	margin: 0px;
+padding: 0px;
+
+color: #03a9f4;
+font-size: 25px;
+font-weight: normal;
+line-height: 30px;
+}
+
+/***************Important link css********/
+.imp-links{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	
+	
+}
+.imp-links li{
+	margin: 0px;
+	padding: 10px;
+	border-bottom: 1px solid #dfe4e8;
+	color: #000;
+	font-size: 18px;
+	
+}
+.imp-links li img{
+	margin: 0px 0 0 -1px;
+padding: 0px 4px 0 0px;
+
+height: 43px;
+width: 43px;
+}
+.img-links li a::before{
+	    content: "\ghgh";
+    font-family: 'FontAwesome';
+    list-style-position: outside;
+    margin-right: 11px;
+    font-size: 16px;
+}
+
+.mb-3 {
+  
+    margin: 9px 0px 9px 10px!important;
+}
+	
+	
+		
+
+.imp-links li a{
+	margin: 0px;
+	padding: 0px;
+    text-decoration: none;
+	color: #000;
+	
+}
+.imp-links li a:hover{
+	margin: 0px;
+	padding: 0px;
+   
+	color: #03a9f4;
+	
+}
+.imp-links li a:active{
+	margin: 0px;
+	padding: 0px;
+   
+	color: #03a9f4;
+	
+}
+.imp-links li:last-child{
+	margin: 0px;
+	padding: 10px;
+	
+	color: #000;
+	font-size: 18px;
+	border-bottom: none;	
+}
+
+.history{
+	margin: 0px 0 0 7px;
+padding: 6px;
+font-size: 16px;
+font-weight: bold;
+color: #039be0;
+}
+.card p{
+	margin: 0px;
+/* 	padding: 10px; */
+	width: 100%;
+}
+
+/*****page-1 scrool menu-css****/
+nav#menu-container {
+    background: #025799;
+    position: relative;
+    width: 100%;/*  height: 56px;*/
+}
+#btn-nav-previous {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    left: 0px;
+    padding: 6px 7px;
+    background: #3a91f3;
+}
+#btn-nav-next {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    right: 0px;
+    padding: 6px 7px;
+    background: #3a91f3;
+}
+.menu-inner-box {
+    width: 100%;
+    white-space: nowrap;
+    margin: 0 auto 0 -20px;
+    overflow: hidden;
+    padding: 0px 15px 0 33px;
+    box-sizing: border-box;
+}
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: block;
+    text-align: center;
+}
+.menu-item {
+    height: 100%;
+    padding: 0px 25px;
+    color: #fff;
+    display: inline;
+    margin: 0 auto;
+    line-height: 39px;
+    text-decoration: none;
+    text-align: center;
+    white-space: no-wrap;
+    /*border-right: solid 1px;*/
+}
+.menu-item:hover {
+    text-decoration: underline;
+    color: #fbff00;
+}
+.menu-item:focus {
+    text-decoration: underline;
+    color: #3a91f3;
+}
+
+/*****page-1 scrool menu-css end****/
+.abroad{
+  margin: 0xp;
+  padding: 0px;
+  list-style-type: square;
+  list-style-position: inside;
+  clear: both;
+  overflow: hidden;
+}
+.abroad li{
+  margin: 0xp;
+  padding: 0px 0 0 20px;
+  color: #000;
+  float: left;
+  
+} 
+.abroad li a{
+  margin: 0xp;
+  padding: 0px;
+  color: #000; 
+  text-decoration: none;
+  
+} 
+
+
+.range{
+
+  padding: 0px;
+  clear: both;
+  overflow: hidden;
+
+}
+.range li{
+  margin-top: 20px;
+  padding: 0px;
+  color: #000;
+  float: left;
+  list-style: none;
+  
+  
+} 
+.range li span{
+  margin: 0xp;
+  padding: 0 0 0 20px;
+  color: #000;
+  float: left;
+  list-style: none;
+  font-weight: bold;
+  
+} 
+.range li a{
+  margin: 0xp;
+  padding: 0 0px 0 20px;
+  color: #000; 
+  text-decoration: none;
+  font-size: 18px;
+}
+.nav.nav-tabs-stu{
+  position: relative;
+background-color: #03a9f4;
+/* height: 50px; */
+width: 100%;
+/* overflow-x: scroll;
+overflow-y:hidden ;
+display: block ruby; */
+margin: 10px 0 0 0;
+}
+.nav.nav-tabs-stu li a {
+  font-weight: 400;
+  padding: 3px 20px;
+  color: #000;
+  text-align: center;
+  display: block;
+  border-right: dotted 1px #fff;
+}
+.nav.nav-tabs-stu li a:hover {
+
+  color: #fff;
+}
+
+/* *******************current-affairs calnder css***************** */
+
+/* .group {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+
+
+img {
+  max-width:100%;
+  height:auto;
+  vertical-align:baseline;
+}
+
+a {
+  text-decoration:none;
+}
+
+
+
+
+.calendar-wrapper {
+  width:335px;
+  margin:3em auto;
+  padding:2em;
+ border: solid 1px #f2f2f2;
+  border-radius:5px;
+  
+  
+}
+table {
+  clear:both;
+  width:100%;
+
+  border-radius:3px;
+  border-collapse:collapse;
+  
+}
+td {
+  height:48px;
+  text-align:center;
+  vertical-align:middle;
+ 
+  border: solid 1px #f2f2f2;
+  width:100% / 7;
+}
+td.not-current {
+ 
+}
+
+td.today {
+  font-weight:700;
+
+  font-size:1.5em;
+}
+thead td {
+  border:none;
+
+  text-transform:uppercase;
+  font-size:1.5em;
+}
+/* #btnPrev {
+  float:left;
+  margin-bottom:20px;
+  &:before {
+    content:'\f104';
+    font-family:FontAwesome;
+    padding-right:4px;
+  } */
+
+#btnNext {
+  float:right;
+  margin-bottom:20px;
+
+  
+}
+#btnPrev, #btnNext {
+  background:transparent;
+  border:none;
+  outline:none;
+  font-size:1em;
+
+  cursor:pointer;
+  font-family:"Roboto Condensed", sans-serif;
+  text-transform:uppercase;
+  transition:all 0.3s ease;
+
+}
+/* *******************current-affairs calnder css end***************** */
+/* *****************my profile************** */
+.user-area .user-menu{
+  background: #fff;
+border: none;
+left: inherit !important;
+right: 0;
+top: 0px !important;
+margin: 0;
+max-width: 150px;
+padding: 5px 10px;
+position: absolute;
+width: 100%;
+z-index: 999;
+min-width: 150px;
+-webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.user-area span{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  top: -23px;
+}
+.user-area .user-menu .nav-link > i {
+  margin-right: 10px;
+}
+.user-area .user-menu .nav-link {
+  color: #607d8b;
+  display: block;
+  font-size: 13px;
+  line-height: 22px;
+  padding: 5px 0;
+}
+.card label{
+  font-size: 15px;
+  color: #000;
+}

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:10 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#333">
+<title>Eenadu-online Exam</title>
+<meta name="description" content="Material Style Theme">
+<!--<link rel="shortcut icon" href="img/favicon30f4.png?v=3">-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/preload.min.css">
+<link rel="stylesheet" href="css/plugins.min.css">
+<link rel="stylesheet" href="css/style.light-blue-500.min.css">
+<link rel="stylesheet" href="css/width-boxed.min.css" id="ms-boxed" disabled="">
+<link rel="stylesheet" href="css/custom.css">
+<!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!----theme color setting-------> 
+<a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand"><i class="fa fa-gears"></i></a>
+<div id="ms-configurator" class="ms-configurator">
+  <div class="ms-configurator-title">
+    <h3><i class="fa fa-gear"></i>Theme Configurator</h3>
+    <a href="javascript:void(0);" class="ms-conf-btn withripple"><i class="zmdi zmdi-close"></i></a> </div>
+  <div class="panel-group" id="accordion_conf" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-headers">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-collapse-conf-2" aria-expanded="false" aria-controls="ms-collapse-conf-2"> <i class="zmdi zmdi-view-compact"></i>Header Styles</a></h4>
+      </div>
+      <div id="ms-collapse-conf-2" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-headers" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <h6>Header Options</h6>
+          <form class="form-inverse ms-conf-radio" id="header-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="whiteHeader" value="white" checked="cheked">
+                  Light Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="primaryHeader" value="primary">
+                  Primary Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="darkHeader" value="dark">
+                  Dark Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="noHeader" value="hidden">
+                  No Header (Navbar Mode)</label>
+              </div>
+            </div>
+          </form>
+          <h6>Navbar Options</h6>
+          <form class="form-inverse ms-conf-radio" id="navbar-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="whiteNavbar" value="white" checked="">
+                  Light Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="primaryNavbar" value="primary">
+                  Primary Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="darkNavbar" value="dark">
+                  Dark Color</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-container">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-conf-collapse-3" aria-expanded="false" aria-controls="ms-conf-collapse-3"> <i class="zmdi zmdi-grid"></i>Container Options</a></h4>
+      </div>
+      <div id="ms-conf-collapse-3" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-container" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <form class="form-inverse ms-conf-radio" id="boxed-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="fullWidth" value="full" checked="">
+                  Full Width</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="boxedWidth" value="boxed">
+                  Boxed Mode</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----theme color setting end-------> 
+
+<!---------------model login------------------->
+<div id="ms-preload" class="ms-preload">
+  <div id="status">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+</div>
+<div class="ms-site-container"> 
+  <!-- Modal -->
+  <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-block shadow-2dp no-pb">
+          <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+          <div class="modal-title text-center"> <span class="ms-logo ms-logo-white ms-logo-sm mr-1">E</span>
+            <h3 class="no-m ms-site-title"><span>EENADU</span></h3>
+          </div>
+          <div class="modal-header-tabs">
+            <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+              <li class="nav-item" role="presentation"><a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple"><i class="zmdi zmdi-account"></i> Login</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-account-add"></i> Register</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-key"></i> Recovery Pass</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+              <form autocomplete="off">
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user">Username</label>
+                      <input type="text" id="ms-form-user" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass">Password</label>
+                      <input type="password" id="ms-form-pass" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                      <div class="form-group no-mt">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Remember Me </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-raised btn-primary pull-right">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="text-center">
+                <h3>Login with</h3>
+                <a href="j#" class="wave-effect-light btn btn-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> Facebook</a> <a href="#" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> <a href="#" class="wave-effect-light btn btn-raised btn-google"><i class="zmdi zmdi-google"></i> Google</a> </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+              <form>
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user-r">Username</label>
+                      <input type="text" id="ms-form-user-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                      <label class="control-label" for="ms-form-email-r">Email</label>
+                      <input type="email" id="ms-form-email-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-r">Password</label>
+                      <input type="password" id="ms-form-pass-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-rn">Re-type Password</label>
+                      <input type="password" id="ms-form-pass-rn" class="form-control">
+                    </div>
+                  </div>
+                  <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                </fieldset>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+              <fieldset>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                    <label class="control-label" for="ms-form-user-re">Username</label>
+                    <input type="text" id="ms-form-user-re" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                    <label class="control-label" for="ms-form-email-re">Email</label>
+                    <input type="email" id="ms-form-email-re" class="form-control">
+                  </div>
+                </div>
+                <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------model login end-------------------> 
+  
+  <!---------------header------------------>
+  
+  <header class="ms-header ms-header-primary"> 
+    <!--ms-header-primary-->
+    <div class="container container-full">
+      <div class="ms-title"> <a href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-header.png" alt=""> --> 
+        <span class="ms-logo animated zoomInDown animation-delay-5">E</span>
+        <h1 class="animated fadeInRight animation-delay-6"><span>EENADU</span></h1>
+        </a> </div>
+      <div class="header-right">
+        <div class="share-menu">
+          <ul class="share-menu-list">
+            <li class="animated fadeInRight animation-delay-3"><a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a></li>
+            <li class="animated fadeInRight animation-delay-2"><a href="ja#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-instagram"></i></a></li>
+          </ul>
+          <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7"><i class="zmdi zmdi-share"></i></a> </div>
+        <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal"><i class="zmdi zmdi-account"></i></a>
+        <form class="search-form animated zoomInDown animation-delay-9">
+          <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-menu"></i></a> </div>
+    </div>
+  </header>
+  
+  <!---------------header end------------------> 
+  
+  <!--------------main-menu------------------>
+  <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+    <div class="container container-full">
+      <div class="navbar-header"> <a class="navbar-brand" href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> --> 
+        <span class="ms-logo ms-logo-sm">E</span> <span class="ms-title"><strong>EENADU</strong></span> </a> </div>
+      <div class="collapse navbar-collapse" id="ms-navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a href="index.html">Home</a> </li>
+          <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Courses<i class="zmdi zmdi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="ms-tab-menu"> 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs ms-tab-menu-left">
+                  <li class="nav-item"><a class="nav-link active" href="#tab-general" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-home"></i>APPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-landing" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-desktop-windows"></i> Banking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-revolution" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-panorama-horizontal"></i>TSPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-shop" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-store"></i>UPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-profile" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-account"></i>SSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-blog" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-edit"></i> DSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-magazine" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-flip"></i> Insurance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-app" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-smartphone-iphone"></i> Police</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-ads" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-search"></i>Railway</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content ms-tab-menu-right">
+                  <div class="tab-pane active" id="tab-general">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="appsc-group-I.html">Group-I</a></li>
+                      <li><a href="appsc-group-II.html">Group-II</a></li>
+                      <li><a href="#">Panchayat Secretary </a></li>
+                      <li><a href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-landing" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="sbiclerk.html">SBI Clerk </a></li>
+                      <li><a href="#">SBI PO</a></li>
+                      <li><a href="#">SBI Specialist Officer </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-revolution" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a class="with-badge" href="#">Group-I</a></li>
+                      <li><a class="with-badge" href="#">Group-II</a></li>
+                      <li><a class="with-badge" href="#">Group-III</a></li>
+                      <li><a class="with-badge" href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-shop" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">CIVILS</a></li>
+                      <li><a href="#">NDA</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-profile" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ssc-cgl.html">SSC CGL</a></li>
+                      <li><a href="#">SSC CHSL</a></li>
+                      <li><a href="#">SSC Stenographer</a></li>
+                      <li><a href="#">SSC MTS </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-blog" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">TS School Assistant</a></li>
+                      <li><a href="#">TS Secondary Grade Teachers</a></li>
+                      <li><a href="#">TS Telugu Pandit</a></li>
+                      <li><a href="#">AP School Assistant</a></li>
+                      <li><a href="#">AP Secondary Grade Teachers</a></li>
+                      <li><a href="#">AP Telugu Pandit</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-magazine" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">LIC AAO</a></li>
+                      <li><a href="#">LIC ADO</a></li>
+                      <li><a href="#">LIC Assistant</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-ads" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">RRC Group-D</a></li>
+                      <li><a href="#">RRB NTPC </a></li>
+                      <li><a href="#">RRB ALP</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-app" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ts-sub-inspector.html">TS Police SI</a></li>
+                      <li><a href="ts-constable.html">TS Police Constable </a></li>
+                      <li><a href="#">AP Police SI </a></li>
+                      <li><a href="#">AP Police Constable </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a href="onlineexam.html" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">Online Exams</a></li>
+          <li class="nav-item dropdown"> <a href="current-affairs.html" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">GK & Current Affairs</a></li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Study Abroad<i class="zmdi zmdi-chevron-down"></i></a> </li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Careers & Courses</a> </li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Institutes</a> </li>
+        </ul>
+      </div>
+      <a href="#" class="ms-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a></div>
+    <!-- container --> 
+  </nav>
+  <div class="ms-hero-page-override ms-hero-img-keyboard ms-hero-bg-primary mb-6">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">CSR Policy</h1>
+        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus laboriosam, ut placeat autem itaque, possimus illum dicta enim quia. Quam similique voluptate illo debitis corrupti sunt, vitae dicta officia impedit hic. Perferendis, odit consequuntur. </p>
+      </div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-slash">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">CSR Policy</a></li>
+        </ol>
+      </nav>
+      <div class="btn-group"> </div>
+      <div class="col-md-3 pull-right">
+        <select class="btn btn-success btn-raised">
+          <option>Select Language</option>
+          <option>Telugu</option>
+          <option>English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="card card-hero animated slideInUp animation-delay-8 mb-6">
+    <div class="card-body-big">
+      <h2 class="color-primary">CSR Policy</h2>
+      <div class="row">
+        <p class="lead">1. Introduction</p>
+        <p>Ushodaya Enterprises Private Limited (UEPL) is committed to good Corporate Citizenship and has a firm belief that businesses are key organs of the society, which have an underlying responsibility towards empowering people and ensuring sustainable development in the overall interest of the Society and the eco system in which we operate.</p>
+        <p class="lead">2.Applicability</p>
+        <p>This Corporate Social Responsibility Policy (“CSR Policy”) has been adopted by the Company in consonance with Section 135 of the Companies Act 2013 (“Act”), the Companies (Corporate Social Responsibility Policy) Rules 2014 (“CSR Rules”), and subsequent amendments / notifications/circulars issued by the Ministry of Corporate Affairs, Government of India, from time to time.</p>
+        <p>The Policy shall apply to all CSR projects/programmes undertaken by the Company in India as per Schedule VII of the Act.</p>
+        <p class="lead">3.CSR Budget</p>
+        <p>The CSR Committee of the Board constituted under Section 135 of the Act will recommend eligible projects to be taken up as sustainable projects and project wise annual budgeted expenditure to the Board for its consideration and approval.</p>
+        <p>The total CSR budget for any financial year commencing from 2014- 15shall be for an amount equivalent to 2% of the average net profits of the Company made during the three immediately preceding financial years.</p>
+        <p>The Board of Directors shall spend the CSR obligation amounts on various projects recommended by the CSR Committee. In case where the obligated amount has not been spent in any particular year, the Board shall in its Report to the shareholders, explain the reasons for not being able to spend the required amount.</p>
+        <p>The Company can undertake projects which may involve implementation period of 3 to 4 years as “Ongoing Projects” and allocate resources accordingly. </p>
+        <p class="lead">4.Scope</p>
+        <p>It is the endeavour of the Company to focus on the following broad activities.</p>
+        <ul>
+          <li>Rural development</li>
+          <li>village roads</li>
+          <li>renewable energy installations</li>
+          <li>preventive healthcare</li>
+          <li>sanitation</li>
+          <li>provision of safe drinking water</li>
+          <li>livelihood enhancement projects</li>
+          <li>imparting vocational skills, skill development</li>
+          <li>agro forestry, soil conservation, rain water harvesting</li>
+          <li>construction of hostels for destitute women and children</li>
+          <li>schools</li>
+          <li>old age homes</li>
+          <li>development of traditional arts and crafts etc.</li>
+          <li>restoration of old temples</li>
+        </ul>
+        <p>The Company may take up such other activities which are broadly covered under Schedule VII of the Act (capturing the essence of the subjects enumerated therein, with liberal interpretation) and any additions which may be made hereafter. Relief and rehabilitation works in case of any natural calamities and major disasters, will also be taken up under CSR.</p>
+        <p class="lead">5.CSR Committee</p>
+        <p>Composition of the CSR committee: The CSR Committee of the Board will consist of three directors</p>
+        <ul>
+          <li>Sri RamojiRao</li>
+          <li>Sri A.RamamohanaRao</li>
+          <li>Sri. Ch. Kiron</li>
+        </ul>
+        <p class="lead">The CSR committee will be responsible for:</p>
+        <ul>
+          <li>formulating the CSR policy in compliance to Section 135 of the Act read with the rules made thereunder</li>
+          <li>Identifying activities to be undertaken as per Schedule VII of the Companies Act 2013.</li>
+          <li>Recommending to Board the CSR expenditure to be incurred.</li>
+          <li>Recommending to Board, modifications to the CSR policy as and when required.</li>
+          <li>regularly monitoring the implementation of the CSR policy and various projects undertaken thereunder.</li>
+        </ul>
+        <p class="lead">6. IMPLEMENTATION</p>
+        <p>The investment and duration of programme will depend on its nature, extent of coverage and intended impact of the programme. It may be ensured that majority of the CSR activities are undertaken in both Andhra Pradesh and Telangana.</p>
+        <p>Implementation may be taken up through designated teams of the company or at corporate level under the programs as approved by the CSR Committee and the Board of the company. The company may also implement the CSR schemes in collaboration with its associate companies or other companies, wherever feasible.  Company may also appoint an Implementation Agency in the form of a Registered Trust to carry out the approved CSR Projects and make contributions to the Corpus of the Trust from time to time.</p>
+        <p class="lead">Execution of Programmes:</p>
+        <p>Project activities identified under CSR are to be implemented by employees, selected volunteers, specialized agencies, which include Voluntary Organisations (NGOs), Elected local bodies such as Panchayats, Institutes / Academic Organisations, Trusts, Missions, Self Help Groups, Govt./Semi Govt. / Autonomous Organisations, MahilaMandals/ Samitis, Professional Consultancy Organization etc.,</p>
+        <p>Initiatives of State Governments, District administration, Local Administration as well as Central Government Departments/ Agencies, Self-Help Groups etc., would be dovetailed / synergized with the initiatives taken by the Company.</p>
+        <p>Activities shall, as far as possible, be implemented in a project mode. For easy implementation, long-term CSR projects shall be broken down into medium-term and short-term plans. Each plan shall specify the CSR activities planned to be undertaken for each year. Accordingly, the budget shall be allocated for the implementation of these activities and achievement of targets set for each successive year, till the final completion of the project.</p>
+        <p>All the CSR activities shall be monitored regularly by Chairman and the CSR Committee.</p>
+        <p class="lead">7. Roles and Responsibilities</p>
+        <p>The Board of the Company will be responsible for:</p>
+        <ul>
+          <li>approving the CSR policy as recommended and formulated by the CSR Committee</li>
+          <li>ensuring that in each financial year the Company spends at least 2% of the average net profit before taxation made during the three immediate preceding financial years on the CSR activities specified in Schedule VII of the Act.</li>
+          <li>ensuring that every financial year funds committed by the Company for CSR activities are utilised effectively, and regularly monitoring implementation.</li>
+          <li>disclosing in its Annual Report the names of CSR Committee members, the content of the CSR policy and ensure annual reporting of its CSR activities on the Company website.</li>
+          <li>ensuring annual reporting of CSR policy to the Ministry of Corporate Affairs, Government of India, as per the format prescribed under the CSR rules as amended from time to time.</li>
+        </ul>
+        <p>As per Section 135 of the Act, the reasons for under spending of the allocated CSR budget shall be specified in the Board’s Report.</p>
+        <p>The surplus arising out of the CSR activities, if any, will not be considered as a part of the business profits of the company.</p>
+        <p class="lead">8. General</p>
+        <ul>
+          <p>a) The CSR Policy shall be recommended by the CSR Committee to The Board of Directors for its approval.</p>
+          <p>b) The Company reserves the right to modify, cancel, add, or amend any of the above rules/guidelines, with the approval of CSR Committee & ratification of Board of Directors.</p>
+          <p> c) Any or all provisions of the CSR policy shall be subject to revision/ amendment in accordance with the guidelines on the subject as may be issued from Government of India, from time to time.</p>
+          <p>d) In case of doubt with regard to any of the provision of the policy and also in respect of matters not covered herein, the interpretation & decision of the CSR Committee shall be final.</p>
+          <p>e) Certain projects/activities which are not approved by CSR Committee but are required to be implemented on an urgent basis in unforeseen circumstances relating to Natural calamity, can be taken up for implementation after approval from the Chairman. The CSR Committee and Board of Directors would be appraised about such projects/activities during their next meeting.</p>
+        </ul>
+        <p class="lead">USHODAYA ENTERPRISES PRIVATE LIMITED</p>
+        <p class="lead">CSR PROJECTS</p>
+        <p>The Company is implementing the CSR activities under collaboration with eligible Group Companies through a Registered Trust Ramoji Foundation, the Implementation Agency. </p>
+        <p>1.Rural Development, Sanitation & Hygiene (Public Toilets), Water Supply, School Infrastructure taken up at Pedaparupudi Village, Krishna District, Andhra Pradesh State.</p>
+        <p>2.Rural Development, livelihoods improvement, Protected Water Supply, Anganwadi School Infrastrcture, Dwacra Building, Public Toilets taken up at Naganpally, Ranga Reddy District, Telangana State.</p>
+        <p>3.Rural Development, school infrastructure works at Anajpur, Hayatnagar Mandal, Ranga Reddy District.</p>
+        <p>4.Disaster relief extended to Kerala flood victims by way of construction of houses for the displaced people in Alleppey district.</p>
+        <p>5.Contribution to provide assistance / preventive care and relief measures towards Covid 19 Pandemic, in the States of Andhra Pradesh & Telengana States.</p>
+        <p>6.Skill development initiative under Ramoji Academy of Film & Television by way of providing Vocational courses and training in film and video services.</p>
+        <p>7.Lakshya Project - To support and encourage deserving candidates from under privileged families to take up sports / athletics in rural areas, in Andhra Pradesh & Telangana</p>
+      </div>
+      <hr class="dotted">
+    </div>
+  </div>
+</div>
+<!-- col-lg-9 --> 
+
+<!-- row --> 
+
+<!-- ms-paper -->
+<div class="clearfix"></div>
+<aside class="ms-footbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ms-footer-col">
+        <div class="ms-footbar-block"> 
+          <!-- <h3 class="ms-footbar-title">Sitemap</h3>-->
+          <ul class="list-unstyled ms-icon-list three_cols">
+            <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+            <li><a href="#"><i class="zmdi zmdi-edit"></i>About-Us</a></li>
+            <li><a href="#"><i class="zmdi zmdi-image-o"></i>Doubts</a></li>
+            <li><a href="#"><i class="zmdi zmdi-case"></i>Online Courses</a></li>
+            <li><a href="#"><i class="zmdi zmdi-time"></i>Video Classes</a></li>
+            <li><a href="page-pricing.html"><i class="zmdi zmdi-money"></i> Practice Exams</a></li>
+            <li><a href="#"><i class="zmdi zmdi-help"></i> CSR Policy</a></li>
+            <li><a href="#"><i class="zmdi zmdi-lock"></i> Terms & Conditions</a></li>
+            <li><a href="#"><i class="zmdi zmdi-email"></i> Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="ms-footbar-block"> 
+          <!--<h3 class="ms-footbar-title">Social Media</h3>-->
+          <div class="ms-footbar-social"> <a href="#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a> <a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a> 
+            <!-- <a href="javascript:void(0)" class="btn-circle btn-youtube"><i class="zmdi zmdi-youtube-play"></i></a>--> 
+            <a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a> <a href="#" class="btn-circle btn-instagram"><i class="zmdi zmdi-instagram"></i></a> 
+            <!--<a href="javascript:void(0)" class="btn-circle btn-github"><i class="zmdi zmdi-github"></i></a>--> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-------------------------footer----------------------------->
+<footer class="ms-footer clearfix">
+  <div class="container">
+    <p class="pull-left">Copyright © 2021 Eenadu All Rights Reserved </p>
+    <p class="pull-right">Powered By Margadarsi Computers</p>
+  </div>
+</footer>
+<div class="btn-back-top"> <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised "><i class="zmdi zmdi-long-arrow-up"></i></a> </div>
+
+<!-------------------------------- slidebar menu-------------------------------- -->
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+  <div class="sb-slidebar-container">
+    <header class="ms-slidebar-header">
+      <div class="ms-slidebar-login"> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account"></i> Login</a> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account-add"></i> Register</a> </div>
+      <div class="ms-slidebar-title">
+        <form class="search-form">
+          <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box-slidebar"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <div class="ms-slidebar-t"> <span class="ms-logo ms-logo-sm">E</span>
+          <h3><span>EENADU</span></h3>
+        </div>
+      </div>
+    </header>
+    <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+      <li class="card" role="tab" id="sch1"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1"> <i class="zmdi zmdi-home"></i> Home </a>
+        <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
+          <li><a href="index.html">Default Home</a></li>
+          <li><a href="home-generic-2.html">Home Black Slider</a></li>
+          <li><a href="home-landing.html">Home Landing Intro</a></li>
+          <li><a href="home-landing3.html">Home Landing Video</a></li>
+          <li><a href="home-shop.html">Home Shop 1</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch2"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2"> <i class="zmdi zmdi-desktop-mac"></i> Pages </a>
+        <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2" data-parent="#slidebar-menu">
+          <li><a href="page-about.html">About US</a></li>
+          <li><a href="page-team.html">Our Team</a></li>
+          <li><a href="page-product.html">Products</a></li>
+          <li><a href="page-services.html">Services</a></li>
+          <li><a href="page-faq.html">FAQ</a></li>
+          <li><a href="page-timeline_left.html">Timeline</a></li>
+          <li><a href="page-contact.html">Contact Option</a></li>
+          <li><a href="page-login.html">Login</a></li>
+          <li><a href="page-pricing.html">Pricing</a></li>
+          <li><a href="page-coming.html">Coming Soon</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch4"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc4"> <i class="zmdi zmdi-edit"></i> Blog </a>
+        <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4" data-parent="#slidebar-menu">
+          <li><a href="blog-sidebar.html">Blog Sidebar 1</a></li>
+          <li><a href="blog-sidebar2.html">Blog Sidebar 2</a></li>
+          <li><a href="blog-masonry.html">Blog Masonry 1</a></li>
+          <li><a href="blog-masonry2.html">Blog Masonry 2</a></li>
+          <li><a href="blog-full.html">Blog Full Page 1</a></li>
+          <li><a href="blog-full2.html">Blog Full Page 2</a></li>
+          <li><a href="blog-post.html">Blog Post 1</a></li>
+          <li><a href="blog-post2.html">Blog Post 2</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch5"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5"> <i class="zmdi zmdi-shopping-basket"></i> E-Commerce </a>
+        <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5" data-parent="#slidebar-menu">
+          <li><a href="ecommerce-filters.html">E-Commerce Sidebar</a></li>
+          <li><a href="ecommerce-filters-full.html">E-Commerce Sidebar Full</a></li>
+          <li><a href="ecommerce-filters-full2.html">E-Commerce Topbar Full</a></li>
+          <li><a href="ecommerce-item.html">E-Commerce Item</a></li>
+          <li><a href="ecommerce-cart.html">E-Commerce Cart</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch6"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc6"> <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
+        <ul id="sc6" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch6" data-parent="#slidebar-menu">
+          <li><a href="portfolio-filters_sidebar.html">Portfolio Sidebar Filters</a></li>
+          <li><a href="portfolio-filters_topbar.html">Portfolio Topbar Filters</a></li>
+          <li><a href="portfolio-filters_sidebar_fluid.html">Portfolio Sidebar Fluid</a></li>
+          <li><a href="portfolio-filters_topbar_fluid.html">Portfolio Topbar Fluid</a></li>
+          <li><a href="portfolio-cards.html">Porfolio Cards</a></li>
+          <li><a href="portfolio-masonry.html">Porfolio Masonry</a></li>
+          <li><a href="portfolio-item.html">Portfolio Item 1</a></li>
+          <li><a href="portfolio-item2.html">Portfolio Item 2</a></li>
+        </ul>
+      </li>
+      <li> <a class="link" href="component-typography.html"><i class="zmdi zmdi-view-compact"></i> UI Elements</a> </li>
+      <li> <a class="link" href="page-all.html"><i class="zmdi zmdi-link"></i> All Pages</a> </li>
+    </ul>
+    <div class="ms-slidebar-social ms-slidebar-block">
+      <h4 class="ms-slidebar-block-title">Social Links</h4>
+      <div class="ms-slidebar-social"> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> <span class="badge-pill badge-pill-pink">12</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> <span class="badge-pill badge-pill-pink">4</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google"><i class="zmdi zmdi-google"></i>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram"><i class="zmdi zmdi-instagram"></i>
+        <div class="ripple-container"></div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/plugins.min.js"></script> 
+<script src="js/app.min.js"></script> 
+<script src="js/configurator.min.js"></script> 
+<script>
+$('#btn-nav-previous').click(function(){
+            $(".menu-inner-box").animate({scrollLeft: "-=100px"});
+        });
+        
+        $('#btn-nav-next').click(function(){
+            $(".menu-inner-box").animate({scrollLeft: "+=100px"});
+        });
+	</script> 
+<script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script> 
+<script src="js/index.js"></script>
+</body>
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:11 GMT -->
+</html>

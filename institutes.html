@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:10 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#333">
+<title>Eenadu-online Exam</title>
+<meta name="description" content="Material Style Theme">
+<!--<link rel="shortcut icon" href="img/favicon30f4.png?v=3">-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/preload.min.css">
+<link rel="stylesheet" href="css/plugins.min.css">
+<link rel="stylesheet" href="css/style.light-blue-500.min.css">
+<link rel="stylesheet" href="css/width-boxed.min.css" id="ms-boxed" disabled="">
+<link rel="stylesheet" href="css/custom.css">
+<!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!----theme color setting-------> 
+<a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand"><i class="fa fa-gears"></i></a>
+<div id="ms-configurator" class="ms-configurator">
+  <div class="ms-configurator-title">
+    <h3><i class="fa fa-gear"></i> Theme Configurator</h3>
+    <a href="javascript:void(0);" class="ms-conf-btn withripple"><i class="zmdi zmdi-close"></i></a> </div>
+  <div class="panel-group" id="accordion_conf" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-headers">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-collapse-conf-2" aria-expanded="false" aria-controls="ms-collapse-conf-2"> <i class="zmdi zmdi-view-compact"></i> Header Styles</a></h4>
+      </div>
+      <div id="ms-collapse-conf-2" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-headers" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <h6>Header Options</h6>
+          <form class="form-inverse ms-conf-radio" id="header-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="whiteHeader" value="white" checked="cheked">
+                  Light Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="primaryHeader" value="primary">
+                  Primary Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="darkHeader" value="dark">
+                  Dark Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="noHeader" value="hidden">
+                  No Header (Navbar Mode) </label>
+              </div>
+            </div>
+          </form>
+          <h6>Navbar Options</h6>
+          <form class="form-inverse ms-conf-radio" id="navbar-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="whiteNavbar" value="white" checked="">
+                  Light Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="primaryNavbar" value="primary">
+                  Primary Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="darkNavbar" value="dark">
+                  Dark Color </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-container">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-conf-collapse-3" aria-expanded="false" aria-controls="ms-conf-collapse-3"> <i class="zmdi zmdi-grid"></i> Container Options </a> </h4>
+      </div>
+      <div id="ms-conf-collapse-3" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-container" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <form class="form-inverse ms-conf-radio" id="boxed-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="fullWidth" value="full" checked="">
+                  Full Width </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="boxedWidth" value="boxed">
+                  Boxed Mode </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----theme color setting end-------> 
+
+<!---------------model login------------------->
+<div id="ms-preload" class="ms-preload">
+  <div id="status">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+</div>
+<div class="ms-site-container"> 
+  <!-- Modal -->
+  <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-block shadow-2dp no-pb">
+          <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+          <div class="modal-title text-center"> <span class="ms-logo ms-logo-white ms-logo-sm mr-1">E</span>
+            <h3 class="no-m ms-site-title"><span>EENADU</span></h3>
+          </div>
+          <div class="modal-header-tabs">
+            <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+              <li class="nav-item" role="presentation"><a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple"><i class="zmdi zmdi-account"></i> Login</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-account-add"></i> Register</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-key"></i> Recovery Pass</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+              <form autocomplete="off">
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user">Username</label>
+                      <input type="text" id="ms-form-user" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass">Password</label>
+                      <input type="password" id="ms-form-pass" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                      <div class="form-group no-mt">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Remember Me </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-raised btn-primary pull-right">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="text-center">
+                <h3>Login with</h3>
+                <a href="j#" class="wave-effect-light btn btn-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> Facebook</a> <a href="#" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> <a href="#" class="wave-effect-light btn btn-raised btn-google"><i class="zmdi zmdi-google"></i> Google</a> </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+              <form>
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user-r">Username</label>
+                      <input type="text" id="ms-form-user-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                      <label class="control-label" for="ms-form-email-r">Email</label>
+                      <input type="email" id="ms-form-email-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-r">Password</label>
+                      <input type="password" id="ms-form-pass-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-rn">Re-type Password</label>
+                      <input type="password" id="ms-form-pass-rn" class="form-control">
+                    </div>
+                  </div>
+                  <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                </fieldset>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+              <fieldset>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                    <label class="control-label" for="ms-form-user-re">Username</label>
+                    <input type="text" id="ms-form-user-re" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                    <label class="control-label" for="ms-form-email-re">Email</label>
+                    <input type="email" id="ms-form-email-re" class="form-control">
+                  </div>
+                </div>
+                <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------model login end-------------------> 
+  
+  <!---------------header------------------>
+  
+  <header class="ms-header ms-header-primary"> 
+    <!--ms-header-primary-->
+    <div class="container container-full">
+      <div class="ms-title"> <a href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-header.png" alt=""> --> 
+        <span class="ms-logo animated zoomInDown animation-delay-5">E</span>
+        <h1 class="animated fadeInRight animation-delay-6"><span>EENADU</span></h1>
+        </a> </div>
+      <div class="header-right">
+        <div class="share-menu">
+          <ul class="share-menu-list">
+            <li class="animated fadeInRight animation-delay-3"><a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a></li>
+            <li class="animated fadeInRight animation-delay-2"><a href="ja#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-instagram"></i></a></li>
+          </ul>
+          <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7"><i class="zmdi zmdi-share"></i></a> </div>
+        <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal"><i class="zmdi zmdi-account"></i></a>
+        <form class="search-form animated zoomInDown animation-delay-9">
+          <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q"/>
+          <label for="search-box"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-menu"></i></a>
+		
+		<a href="notification.html" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-notifications"></i></a>
+		</div>
+    </div>
+  </header>
+  
+  <!---------------header end------------------> 
+  
+  <!--------------main-menu------------------>
+  <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+    <div class="container container-full">
+      <div class="navbar-header"> <a class="navbar-brand" href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> --> 
+        <span class="ms-logo ms-logo-sm">E</span> <span class="ms-title"><strong>EENADU</strong></span> </a> </div>
+      <div class="collapse navbar-collapse" id="ms-navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a href="index.html">Home</a></li>
+          <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Courses<i class="zmdi zmdi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="ms-tab-menu"> 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs ms-tab-menu-left">
+                  <li class="nav-item"><a class="nav-link active" href="#tab-general" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-home"></i>APPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-landing" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-desktop-windows"></i> Banking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-revolution" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-panorama-horizontal"></i>TSPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-shop" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-store"></i>UPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-profile" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-account"></i>SSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-blog" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-edit"></i> DSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-magazine" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-flip"></i> Insurance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-app" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-smartphone-iphone"></i> Police</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-ads" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-search"></i>Railway</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content ms-tab-menu-right">
+                  <div class="tab-pane active" id="tab-general">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="appsc-group-I.html">Group-I</a></li>
+                      <li><a href="appsc-group-II.html">Group-II</a></li>
+                      <li><a href="#">Panchayat Secretary </a></li>
+                      <li><a href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-landing" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="sbiclerk.html">SBI Clerk </a></li>
+                      <li><a href="#">SBI PO</a></li>
+                      <li><a href="#">SBI Specialist Officer </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-revolution" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a class="with-badge" href="#">Group-I</a></li>
+                      <li><a class="with-badge" href="#">Group-II</a></li>
+                      <li><a class="with-badge" href="#">Group-III</a></li>
+                      <li><a class="with-badge" href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-shop" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">CIVILS</a></li>
+                      <li><a href="#">NDA</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-profile" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ssc-cgl.html">SSC CGL</a></li>
+                      <li><a href="#">SSC CHSL</a></li>
+                      <li><a href="#">SSC Stenographer</a></li>
+                      <li><a href="#">SSC MTS </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-blog" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">TS School Assistant</a></li>
+                      <li><a href="#">TS Secondary Grade Teachers</a></li>
+                      <li><a href="#">TS Telugu Pandit</a></li>
+                      <li><a href="#">AP School Assistant</a></li>
+                      <li><a href="#">AP Secondary Grade Teachers</a></li>
+                      <li><a href="#">AP Telugu Pandit</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-magazine" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">LIC AAO</a></li>
+                      <li><a href="#">LIC ADO</a></li>
+                      <li><a href="#">LIC Assistant</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-ads" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">RRC Group-D</a></li>
+                      <li><a href="#">RRB NTPC </a></li>
+                      <li><a href="#">RRB ALP</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-app" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ts-sub-inspector.html">TS Police SI</a></li>
+                      <li><a href="ts-constable.html">TS Police Constable </a></li>
+                      <li><a href="#">AP Police SI </a></li>
+                      <li><a href="#">AP Police Constable </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a href="onlineexam.html">Online Exams</a></li>
+          <li class="nav-item dropdown"> <a href="current-affairs.html"> Current Affairs <!--<i class="zmdi zmdi-chevron-down"></i>--></a> </li>
+          <li class="nav-item dropdown"> <a href="current-affairs.html">GK <!--<i class="zmdi zmdi-chevron-down"></i>--></a> </li>
+          <li class="nav-item dropdown"> <a href="studyabroad-details.html">Study Abroad</a> </li>
+          <li class="nav-item dropdown"> <a href="careers.html" data-name="ecommerce">Careers</a> </li>
+          <li class="nav-item dropdown"> <a href="institutes.html" class="nav-link" data-name="ecommerce">Institutes</a> </li>
+        </ul>
+      </div>
+      <a href="#" class="ms-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a> </div>
+    <!-- container --> 
+  </nav>
+  <div class="ms-hero-page-override ms-hero-img-keyboard ms-hero-bg-primary mb-6">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Institutes</h1>
+        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus laboriosam, ut placeat autem itaque, possimus illum dicta enim quia. Quam similique voluptate illo debitis corrupti sunt, vitae dicta officia impedit hic. Perferendis, odit consequuntur. </p>
+      </div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-slash">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Institutes</a></li>
+          <li class="breadcrumb-item"><a href="#">Agriculture</a></li>
+        </ol>
+      </nav>
+      <div class="btn-group"> </div>
+      <div class="col-md-3 pull-right">
+        <select required class="btn btn-info btn-raised">
+          <option value="" disabled selected hidden>Select Language</option>
+          <option value="0">Telugu</option>
+          <option value="1">English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Commerce.jpg" alt="" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Arts & Commerce</h4>
+              <a href="institutes-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/ONLINE-EXAMS.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Computers & Applications</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Design.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Design</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/engineering.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Engineering</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Information-Technology.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">ITI </h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Law.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Law</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Management.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Management</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Medical.jpg" alt="" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2"> Medical</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Science.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Science</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card">
+        <figure class="ms-thumbnail"> <img src="img/institutes/Paramedical.jpg" alt="img" class="img-fluid">
+          <figcaption class="ms-thumbnail-caption text-center">
+            <div class="ms-thumbnail-caption-content">
+              <h4 class="ms-thumbnail-caption-title mb-2">Paramedical</h4>
+              <a href="careers-details.html" class="btn btn-raised btn-danger"><i class="zmdi zmdi-eye"></i> View more</a> </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- col-lg-9 --> 
+
+<!-- row --> 
+
+<!-- ms-paper -->
+<div class="clearfix"></div>
+<aside class="ms-footbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ms-footer-col">
+        <div class="ms-footbar-block"> 
+          <!-- <h3 class="ms-footbar-title">Sitemap</h3>-->
+          <ul class="list-unstyled ms-icon-list three_cols">
+            <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+            <li><a href="#"><i class="zmdi zmdi-edit"></i>About-Us</a></li>
+            <li><a href="#"><i class="zmdi zmdi-image-o"></i>Doubts</a></li>
+            <li><a href="#"><i class="zmdi zmdi-case"></i>Online Courses</a></li>
+            <li><a href="#"><i class="zmdi zmdi-time"></i>Video Classes</a></li>
+            <li><a href="page-pricing.html"><i class="zmdi zmdi-money"></i> Practice Exams</a></li>
+            <li><a href="#"><i class="zmdi zmdi-help"></i> CSR Policy</a></li>
+            <li><a href="#"><i class="zmdi zmdi-lock"></i> Terms & Conditions</a></li>
+            <li><a href="#"><i class="zmdi zmdi-email"></i> Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="ms-footbar-block"> 
+          <!--<h3 class="ms-footbar-title">Social Media</h3>-->
+          <div class="ms-footbar-social"> <a href="#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a> <a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a> 
+            <!-- <a href="javascript:void(0)" class="btn-circle btn-youtube"><i class="zmdi zmdi-youtube-play"></i></a>--> 
+            <a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a> <a href="#" class="btn-circle btn-instagram"><i class="zmdi zmdi-instagram"></i></a> 
+            <!--<a href="javascript:void(0)" class="btn-circle btn-github"><i class="zmdi zmdi-github"></i></a>--> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-------------------------footer----------------------------->
+<footer class="ms-footer clearfix">
+  <div class="container">
+    <p class="pull-left">Copyright © 2021 Eenadu All Rights Reserved </p>
+    <p class="pull-right">Powered By Margadarsi Computers</p>
+  </div>
+</footer>
+<div class="btn-back-top"> <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised "><i class="zmdi zmdi-long-arrow-up"></i></a> </div>
+
+<!-------------------------------- slidebar menu-------------------------------- -->
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+  <div class="sb-slidebar-container">
+    <header class="ms-slidebar-header">
+      <div class="ms-slidebar-login"> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account"></i> Login</a> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account-add"></i> Register</a> </div>
+      <div class="ms-slidebar-title">
+        <form class="search-form">
+          <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box-slidebar"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <div class="ms-slidebar-t"> <span class="ms-logo ms-logo-sm">E</span>
+          <h3><span>EENADU</span></h3>
+        </div>
+      </div>
+    </header>
+    <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+      <li class="card"> <a  href="index.html"> <i class="zmdi zmdi-home"></i> Home </a> </li>
+      <li class="card" role="tab" id="sch1"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1"> <i class="zmdi zmdi-home"></i> Courses </a>
+        <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
+          <li role="tab" id="sch"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5">APPSC</a>
+            <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5">
+              <li><a href="appsc-group-I.html">Group-I</a></li>
+              <li><a href="appsc-group-II.html">Group-II</a></li>
+              <li><a href="#">Panchayat Secretary </a></li>
+              <li><a href="#">Group-IV</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch2"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2">TSPSC</a>
+            <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2">
+              <li><a href="home-generic-2.html">Group-I</a></li>
+              <li><a href="home-landing.html">Group-II</a></li>
+              <li><a href="home-generic-2.html">Group-III</a></li>
+              <li><a href="home-landing.html">Group-IV</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch3"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc3" aria-expanded="false" aria-controls="sc2">Banking</a>
+            <ul id="sc3" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch3" parent="#slidebar-menu">
+              <li><a href="sbiclerk.html">SBI Clerk</a></li>
+              <li><a href="#">SBI PO</a></li>
+              <li><a href="#">SBI Specialist Officer</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch4"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc2">UPSC</a>
+            <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4">
+              <li><a href="#">CIVILS</a></li>
+              <li><a href="#">NDA</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch7"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc7" aria-expanded="false" aria-controls="sc7">Insurance</a>
+            <ul id="sc7" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch7">
+              <li><a href="#">LIC AAO</a></li>
+              <li><a href="#">LIC ADO</a></li>
+              <li><a href="#">LIC Assistant</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch6"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc5">DSC</a>
+            <ul id="sc6" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch6">
+              <li><a href="#">TS School Assistant</a></li>
+              <li><a href="#">TS Secondary Grade Teachers</a></li>
+              <li><a href="#">AP Telugu Pandit</a></li>
+              <li><a href="#">AP Secondary Grade Teachers</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch8"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc9" aria-expanded="false" aria-controls="sc5">Police</a>
+            <ul id="sc9" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch9">
+              <li><a href="ts-sub-inspector.html">TS Police SI</a></li>
+              <li><a href="ts-constable.html">TS Police Constable </a></li>
+              <li><a href="#">AP Police SI </a></li>
+              <li><a href="#">AP Police Constable </a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch10"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc9" aria-expanded="false" aria-controls="sc5">Railway</a>
+            <ul id="sc10" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch10">
+              <li><a href="#">RRC Group-D</a></li>
+              <li><a href="#">RRB NTPC </a></li>
+              <li><a href="#">RRB ALP</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="card"> <a href="onlineexam.html"> <i class="zmdi zmdi-edit"></i>Online Exams </a> </li>
+      <li class="card"> <a href="current-affairs.html"> <i class="zmdi zmdi-shopping-basket"></i>Current Affairs</a> </li>
+      <li class="card"> <a href="#"> <i class="zmdi zmdi-collection-image-o"></i>GK</a> </li>
+      <li class="card"> <a href="studyabroad.html"> <i class="zmdi zmdi-view-compact"></i>Study Abroad</a> </li>
+      <li class="card"> <a href="careers.html"><i class="zmdi zmdi-link"></i> Careers</a> </li>
+      <li class="card"> <a href="institutes.html"><i class="zmdi zmdi-view-compact"></i> Institutes</a> </li>
+    </ul>
+    <div class="ms-slidebar-social ms-slidebar-block">
+      <h4 class="ms-slidebar-block-title">Social Links</h4>
+      <div class="ms-slidebar-social"> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> <span class="badge-pill badge-pill-pink">12</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> <span class="badge-pill badge-pill-pink">4</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google"><i class="zmdi zmdi-google"></i>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram"><i class="zmdi zmdi-instagram"></i>
+        <div class="ripple-container"></div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<script src="js/plugins.min.js"></script> 
+<script src="js/app.min.js"></script> 
+<script src="js/configurator.min.js"></script> 
+<script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script> 
+<script src="js/index.js"></script>
+</body>
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:11 GMT -->
+</html>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:10 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#333">
+<title>Eenadu-online Exam</title>
+<meta name="description" content="Material Style Theme">
+<!--<link rel="shortcut icon" href="img/favicon30f4.png?v=3">-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/preload.min.css">
+<link rel="stylesheet" href="css/plugins.min.css">
+<link rel="stylesheet" href="css/style.light-blue-500.min.css">
+<link rel="stylesheet" href="css/width-boxed.min.css" id="ms-boxed" disabled="">
+<link rel="stylesheet" href="css/custom.css">
+<!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!----theme color setting-------> 
+<a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand"><i class="fa fa-gears"></i></a>
+<div id="ms-configurator" class="ms-configurator">
+  <div class="ms-configurator-title">
+    <h3><i class="fa fa-gear"></i>Theme Configurator</h3>
+    <a href="javascript:void(0);" class="ms-conf-btn withripple"><i class="zmdi zmdi-close"></i></a> </div>
+  <div class="panel-group" id="accordion_conf" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-headers">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-collapse-conf-2" aria-expanded="false" aria-controls="ms-collapse-conf-2"> <i class="zmdi zmdi-view-compact"></i>Header Styles</a></h4>
+      </div>
+      <div id="ms-collapse-conf-2" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-headers" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <h6>Header Options</h6>
+          <form class="form-inverse ms-conf-radio" id="header-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="whiteHeader" value="white" checked="cheked">
+                  Light Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="primaryHeader" value="primary">
+                  Primary Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="darkHeader" value="dark">
+                  Dark Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="noHeader" value="hidden">
+                  No Header (Navbar Mode)</label>
+              </div>
+            </div>
+          </form>
+          <h6>Navbar Options</h6>
+          <form class="form-inverse ms-conf-radio" id="navbar-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="whiteNavbar" value="white" checked="">
+                  Light Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="primaryNavbar" value="primary">
+                  Primary Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="darkNavbar" value="dark">
+                  Dark Color</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-container">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-conf-collapse-3" aria-expanded="false" aria-controls="ms-conf-collapse-3"> <i class="zmdi zmdi-grid"></i>Container Options</a></h4>
+      </div>
+      <div id="ms-conf-collapse-3" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-container" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <form class="form-inverse ms-conf-radio" id="boxed-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="fullWidth" value="full" checked="">
+                  Full Width</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="boxedWidth" value="boxed">
+                  Boxed Mode</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----theme color setting end-------> 
+
+<!---------------model login------------------->
+<div id="ms-preload" class="ms-preload">
+  <div id="status">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+</div>
+<div class="ms-site-container"> 
+  <!-- Modal -->
+  <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-block shadow-2dp no-pb">
+          <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+          <div class="modal-title text-center"> <span class="ms-logo ms-logo-white ms-logo-sm mr-1">E</span>
+            <h3 class="no-m ms-site-title"><span>EENADU</span></h3>
+          </div>
+          <div class="modal-header-tabs">
+            <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+              <li class="nav-item" role="presentation"><a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple"><i class="zmdi zmdi-account"></i> Login</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-account-add"></i> Register</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-key"></i> Recovery Pass</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+              <form autocomplete="off">
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user">Username</label>
+                      <input type="text" id="ms-form-user" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass">Password</label>
+                      <input type="password" id="ms-form-pass" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                      <div class="form-group no-mt">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Remember Me </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-raised btn-primary pull-right">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="text-center">
+                <h3>Login with</h3>
+                <a href="j#" class="wave-effect-light btn btn-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> Facebook</a> <a href="#" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> <a href="#" class="wave-effect-light btn btn-raised btn-google"><i class="zmdi zmdi-google"></i> Google</a> </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+              <form>
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user-r">Username</label>
+                      <input type="text" id="ms-form-user-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                      <label class="control-label" for="ms-form-email-r">Email</label>
+                      <input type="email" id="ms-form-email-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-r">Password</label>
+                      <input type="password" id="ms-form-pass-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-rn">Re-type Password</label>
+                      <input type="password" id="ms-form-pass-rn" class="form-control">
+                    </div>
+                  </div>
+                  <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                </fieldset>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+              <fieldset>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                    <label class="control-label" for="ms-form-user-re">Username</label>
+                    <input type="text" id="ms-form-user-re" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                    <label class="control-label" for="ms-form-email-re">Email</label>
+                    <input type="email" id="ms-form-email-re" class="form-control">
+                  </div>
+                </div>
+                <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------model login end-------------------> 
+  
+  <!---------------header------------------>
+  
+  <header class="ms-header ms-header-primary"> 
+    <!--ms-header-primary-->
+    <div class="container container-full">
+      <div class="ms-title"> <a href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-header.png" alt=""> --> 
+        <span class="ms-logo animated zoomInDown animation-delay-5">E</span>
+        <h1 class="animated fadeInRight animation-delay-6"><span>EENADU</span></h1>
+        </a> </div>
+      <div class="header-right">
+        <div class="share-menu">
+          <ul class="share-menu-list">
+            <li class="animated fadeInRight animation-delay-3"><a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a></li>
+            <li class="animated fadeInRight animation-delay-2"><a href="ja#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-instagram"></i></a></li>
+          </ul>
+          <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7"><i class="zmdi zmdi-share"></i></a> </div>
+        <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal"><i class="zmdi zmdi-account"></i></a>
+        <form class="search-form animated zoomInDown animation-delay-9">
+          <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-menu"></i></a> </div>
+    </div>
+  </header>
+  
+  <!---------------header end------------------> 
+  
+  <!--------------main-menu------------------>
+  <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+    <div class="container container-full">
+      <div class="navbar-header"> <a class="navbar-brand" href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> --> 
+        <span class="ms-logo ms-logo-sm">E</span> <span class="ms-title"><strong>EENADU</strong></span> </a> </div>
+      <div class="collapse navbar-collapse" id="ms-navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a href="index.html">Home</a> </li>
+          <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Courses<i class="zmdi zmdi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="ms-tab-menu"> 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs ms-tab-menu-left">
+                  <li class="nav-item"><a class="nav-link active" href="#tab-general" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-home"></i>APPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-landing" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-desktop-windows"></i> Banking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-revolution" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-panorama-horizontal"></i>TSPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-shop" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-store"></i>UPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-profile" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-account"></i>SSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-blog" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-edit"></i> DSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-magazine" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-flip"></i> Insurance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-app" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-smartphone-iphone"></i> Police</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-ads" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-search"></i>Railway</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content ms-tab-menu-right">
+                  <div class="tab-pane active" id="tab-general">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="appsc-group-I.html">Group-I</a></li>
+                      <li><a href="appsc-group-II.html">Group-II</a></li>
+                      <li><a href="#">Panchayat Secretary </a></li>
+                      <li><a href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-landing" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">SBI Clerk </a></li>
+                      <li><a href="#">SBI PO</a></li>
+                      <li><a href="#">SBI Specialist Officer </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-revolution" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a class="with-badge" href="#">Group-I</a></li>
+                      <li><a class="with-badge" href="#">Group-II</a></li>
+                      <li><a class="with-badge" href="#">Group-III</a></li>
+                      <li><a class="with-badge" href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-shop" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">CIVILS</a></li>
+                      <li><a href="#">NDA</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-profile" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">SSC CGL</a></li>
+                      <li><a href="#">SSC CHSL</a></li>
+                      <li><a href="#">SSC Stenographer</a></li>
+                      <li><a href="#">SSC MTS </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-blog" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">TS School Assistant</a></li>
+                      <li><a href="#">TS Secondary Grade Teachers</a></li>
+                      <li><a href="#">TS Telugu Pandit</a></li>
+                      <li><a href="#">AP School Assistant</a></li>
+                      <li><a href="#">AP Secondary Grade Teachers</a></li>
+                      <li><a href="#">AP Telugu Pandit</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-magazine" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">LIC AAO</a></li>
+                      <li><a href="#">LIC ADO</a></li>
+                      <li><a href="#">LIC Assistant</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-ads" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">RRC Group-D</a></li>
+                      <li><a href="#">RRB NTPC </a></li>
+                      <li><a href="#">RRB ALP</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-app" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">TS Police SI</a></li>
+                      <li><a href="#">TS Police Constable </a></li>
+                      <li><a href="#">AP Police SI </a></li>
+                      <li><a href="#">AP Police Constable </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a href="onlineexam.html" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">Online Exams</a></li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="blog">GK & Current Affairs <!--<i class="zmdi zmdi-chevron-down"></i>--></a> </li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Study Abroad<i class="zmdi zmdi-chevron-down"></i></a> </li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Careers & Courses</a> </li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Institutes</a> </li>
+        </ul>
+      </div>
+      <a href="#" class="ms-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a></div>
+    <!-- container --> 
+  </nav>
+  <div class="ms-hero-page-override ms-hero-img-keyboard ms-hero-bg-primary mb-6">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Group-I Test Series</h1>
+        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus laboriosam, ut placeat autem itaque, possimus illum dicta enim quia. Quam similique voluptate illo debitis corrupti sunt, vitae dicta officia impedit hic. Perferendis, odit consequuntur. </p>
+      </div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-slash">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="onlineexam.html">OnlineExam</a></li>
+          <li class="breadcrumb-item"><a href="group-1.html">APPSC</a></li>
+          <li class="breadcrumb-item"><a href="paper-1.html">Group-II</a></li>
+          <li class="breadcrumb-item">Screening Test</li>
+          <li class="breadcrumb-item"><a href="paper-1.html">paper-II</a></li>
+        </ol>
+      </nav>
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning btn-raised">Screening Test</button>
+        <button type="button" class="btn btn-warning btn-raised dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-chevron-down right only"></i> </button>
+        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-warning">
+          <li class="dropdown-header">Screening Test</li>
+          <li><a class="dropdown-item" href="appsc-group-II-paper-I.html">Paper – I</a></li>
+          <li><a class="dropdown-item" href="appsc-group-II-paper-II.html">Paper – II</a></li>
+			<li><a class="dropdown-item" href="appsc-group-II-paper-III.html">Paper – III</a></li>
+			<li><a class="dropdown-item" href="appsc-group-II-paper-IV.html">Paper – IV</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-info btn-raised">Mains</button>
+        <button type="button" class="btn btn-info btn-raised dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-chevron-down right only"></i> </button>
+        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-info">
+          <li class="dropdown-header">Mains</li>
+        <li><a class="dropdown-item" href="gourp-II-paper-I.html">Paper – I</a></li>
+          <li><a class="dropdown-item" href="gourp-II-paper-II.html">Paper – II</a></li>
+			<li><a class="dropdown-item" href="gourp-II-paper-III.html">Paper – III</a></li>
+			<li><a class="dropdown-item" href="gourp-II-paper-IV.html">Paper – IV</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 pull-right">
+        <select class="btn btn-success btn-raised">
+          <option>Select Language</option>
+          <option>Telugu</option>
+          <option>English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card card-dark">
+        <div class="card-header">
+          <h2 class="card-title"> Paper – II History,Polity And Society</h2>
+        </div>
+        <div class="list-group"> <a href="#1a" data-toggle="tab" class="list-group-item active"><i class=" color-info zmdi zmdi-collection-image"></i> History,Polity And Society
+          <div class="ripple-container"></div>
+          </a> <a href="#2a" data-toggle="tab" class="list-group-item "><i class=" color-danger zmdi zmdi-case-check"></i>Socio-Cultural History of India and Telangana</a> <a href="#3a" data-toggle="tab" class="list-group-item "><i class=" color-royal zmdi zmdi-home"></i>Overview of the Indian Constitution and Politics</a> <a href="#4a" data-toggle="tab" class="list-group-item "><i class=" color-success zmdi zmdi-ticket-star"></i>Social Structure, Issues and Public Policies</a>
+		 </div>
+      </div>
+    </div>
+    <!------- Paper – I General Studies--------------->
+    
+    <div class="col-xl-8 col-lg-8">
+      <div class="tab-content"> 
+        
+        <!-------------History, Culture--------------->
+        <div class=" tab-pane active" id="1a">
+          <h3 class="color-primary">History,Polity And Society</h3>
+          <div class="ms-collapse accordion" role="tablist">
+            <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+				
+              <div class="card-header" role="tab" id="heading11a">
+                <h4 class="card-title  alert alert-primary  alert-light "><a class="collapsed" role="button" data-toggle="collapse" href="#collapse11a" aria-expanded="false">Evolution of Indian Constitution – Nature and salient features – Preamble.</a></h4>
+              </div>
+              <div id="collapse11a" class="card-collapse collapse show">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-primary" href="landing.html"> Preamble.</a> </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+              <div class="card-header" role="tab" id="heading21a">
+                <h4 class="card-title alert alert-warning  alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse21a" aria-expanded="false"> Fundamental Rights – Directive Principles of State Policy – Fundamental Duties. </a> </h4>
+              </div>
+              <div id="collapse21a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading2" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-warning" href="#"> Fundamental Duties. </a> </div>
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+              <div class="card-header" role="tab" id="heading31a">
+                <h4 class="card-title alert alert-success  alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse31a" aria-expanded="false"> Distinctive Features of Indian Federalism – Distribution of Legislative and Administrative Powers between Union and States.</a> </h4>
+              </div>
+              <div id="collapse31a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading3" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-success" href="#">Distribution of Legislative </a> </div>
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+              <div class="card-header" role="tab" id="heading41a">
+                <h4 class="card-title alert alert-info  alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse41a" aria-expanded="false"> Union and State Governments – President – Prime Minister and Council of Ministers; Governor, Chief Minister and Council of Ministers – Powers and Functions.</a> </h4>
+              </div>
+              <div id="collapse41a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading4" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-info" href="#">Union and State Government</a> </div>
+                </div>
+              </div>
+            </div>
+			  
+            <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+              <div class="card-header" role="tab" id="heading51a">
+                <h4 class="card-title alert alert-danger  alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse51a" aria-expanded="false">Rural and Urban Governance with special reference to the 73rd and 74th Amendments.</a> </h4>
+              </div>
+              <div id="collapse51a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading5" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"><a class="btn btn-default btn-raised alert alert-danger  alert-light" href="#">73rd and 74th Amendments.</a></div>
+                </div>
+              </div>
+            </div>
+			  
+            <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+              <div class="card-header" role="tab" id="heading61a">
+                <h4 class="card-title alert alert-info  alert-light"><a class="collapsed" role="button" data-toggle="collapse" href="#collapse61a" aria-expanded="false" > Electoral System: Free and fair Elections, Malpractices; Election Commission; Electoral Reforms and Political Parties.</a></h4>
+              </div>
+              <div id="collapse61a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading6" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-info  alert-light" href="#">Electoral Reforms and Political Parties.</a> </div>
+                </div>
+              </div>
+            </div>
+			  
+			  
+			  <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+              <div class="card-header" role="tab" id="heading71a">
+                <h4 class="card-title alert alert-danger  alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse71a" aria-expanded="false">Judicial System in India – Judicial Activism.</a> </h4>
+              </div>
+              <div id="collapse71a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading4" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-danger" href="#">Judicial Activism.</a> </div>
+                </div>
+              </div>
+            </div>
+			  
+			  <div class="mb-0 card card-default wow fadeInUp animation-delay-2">
+              <div class="card-header" role="tab" id="heading81a">
+                <h4 class="card-title alert alert-info  alert-light"><a class="collapsed" role="button" data-toggle="collapse" href="#collapse81a" aria-expanded="false" >Special Provisions for Scheduled Castes, Scheduled Tribes, Backward Classes, Women and Minorities. b) Welfare Mechanism for Enforcement – National Commission for Scheduled Castes, National Commission for Scheduled Tribes and National Commission for Backward Classes. 9. Indian Constitution: New Challenges.</a></h4>
+              </div>
+              <div id="collapse81a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading6" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-info  alert-light" href="#">Indian Constitution: New Challenges.
+ 	Special Provisions
+</a> </div>
+                </div>
+              </div>
+            </div>
+			  
+			  
+			  
+          </div>
+        </div>
+        
+        <!-------------Socio-Cultural History of India and Telangana--------------->
+        <div class=" tab-pane" id="2a">
+          <h3 class="color-primary">Socio-Cultural History of India and Telangana</h3>
+          <div class="ms-collapse accordion" role="tablist">
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="heading12a">
+                <h4 class="card-title alert alert-primary  alert-light"><a class="collapsed" role="button" data-toggle="collapse" href="#collapse12a" aria-expanded="false"> Salient features of Indus Valley Civilization: Society and Culture. -Early and Later Vedic Civilizations; Religious Movements in Sixth Century B.C. –Jainism and   Buddhism. Socio,         Cultural Contribution of Mauryas, Guptas, Pallavas, Chalukyas, Cholas Art and Architecture - Harsha and the Rajput Age </a></h4>
+              </div>
+              <div id="collapse12a" class="card-collapse">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-info" href="landing.html"> Early and Later Vedic           
+	Harsha and the Rajput Age....
+ </a> </div>
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="heading22a">
+                <h4 class="card-title alert alert-warning  alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse22a" aria-expanded="false"> The Advent of Islam and the Establishment of Delhi Sultanate-Socio, Cultural Conditions under the Sultanate –Sufi and Bhakti Movements. The Mughals: Social and Cultural Conditions; Language, Literature, Art and Architecture. Rise of Marathas and their contribution to Culture; Socio-Cultural conditions in the Deccan under the Bahamanis and Vijayanagara Literature, Art and Architecture.</a> </h4>
+              </div>
+              <div id="collapse22a" class="card-collapse collapse" role="tabpanel" aria-labelledby="heading22a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-warning" href="#"> Parliament of India - Lok Sabha
+                    Central Government </a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingThree2a">
+                <h4 class="card-title alert alert-danger alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree2a" aria-expanded="false" aria-controls="collapseThree2a"> Constitutional Institutions, Powers, Duties, Responsibilities. Panchayati Raj, Government Policies, Public Administration</a> </h4>
+              </div>
+              <div id="collapseThree2a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingThree2a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-danger" href="#">Election Commission of India </a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-light alert-danger" href="#">Finance Commission of India</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingFour2a">
+                <h4 class="card-title alert alert-info alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFour2a" aria-expanded="false" aria-controls="collapseFour2a"> Influence of libaralization, Privatization, Globalization on governance, Legal, Regulated, Quasi-judicial bodies (quasi-judicial)</a> </h4>
+              </div>
+              <div id="collapseFour2a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingFour2a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-info alert-light" href="#">Regulated Authorities </a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingFive2a">
+                <h4 class="card-title alert alert-success alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive2a" aria-expanded="false" aria-controls="collapseFive2a"> Rights issues (human rights, women's rights, SC / ST rights, children's rights), etc.</a> </h4>
+              </div>
+              <div id="collapseFive2a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingFive2a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-success alert-light " href="#">National Scheduled Tribes Commission</a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-success alert-light" href="#">Women's Commission, National, State Minority Commissions -  Human Rights Commission</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingSix2a">
+                <h4 class="card-title alert alert-dark alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseSix2a" aria-expanded="false" aria-controls="collapseSix2a"> Indian Foreign Policy - International Relations. Important Organizations, Agencies, Various Platforms - Their Structure, Jurisdiction, Important Policies and Programs of Central and State Governments</a> </h4>
+              </div>
+              <div id="collapseSix2a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingSix2a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-dark alert-light " href="#">Foreign Policy of India </a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-dark alert-light" href="#">International organizations </a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-------------Overview of the Indian Constitution and Politics--------------->
+        <div class=" tab-pane" id="3a">
+          <h3 class="color-primary">Overview of the Indian Constitution and Politics</h3>
+          <div class="ms-collapse accordion" role="tablist">
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingOne3a">
+                <h4 class="card-title alert alert-success alert-light"><a class="collapsed" role="button" data-toggle="collapse" href="#collapseOne3a" aria-expanded="false" aria-controls="collapseOne3a"> Basic Features of the Indian Economy as a Developing Economy - Economic Development since Independence - Plan Successes - Nithi Aayog, Nithi Aayog Policy for Economic Development - Growth, Distribution Justice. Economic Development, Human Development Index - India's Position in the World -Ecosystem decline. Challenges - Sustainable Development - Environmental Policy.</a></h4>
+              </div>
+              <div id="collapseOne3a" class="card-collapse">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-success alert-light" href="landing.html"> Nithi Aayog </a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-success alert-light" href="#" >Economic Development since Independence </a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingTwo3a">
+                <h4 class="card-title alert alert-primary alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo3a" aria-expanded="false" aria-controls="collapseTwo3a"> National Income - Concepts related to it, Categories - National Statistics of India -  Demographics -  Poverty, Inequalities -Professional Construction, Unemployment -Different Employment concept, Poverty Alleviation Schemes. Rural development, urban development issues. </a> </h4>
+              </div>
+              <div id="collapseTwo3a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingTwo3a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-primary alert-light" href="#"> Poverty</a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-primary alert-light" href="#"> Rural development</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingThree3a">
+                <h4 class="card-title alert alert-warning alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree3a" aria-expanded="false" aria-controls="collapseThree3a"> Delhi Sultans, Vijayanagara Empire, Mughal Empire, Bhakti  Indian Agriculture - Irrigation System, Water - Agricultural Investments - Agricultural Strategy, Agricultural Policy - Agricultural Crisis, Land Reforms - Agricultural Leverage - Minimum Support Prices - Malnutrition, Food Security - Indian Industrial Sector - Industrial Policy - Manufacturing in India Start-up, stand-up programs- Special Economic Zones, Industrial Corridors - Energy, Energy Policies, Economic Reforms, Liberalization, Privatization, Globalization, International Trade, Balance of Payments - India, World Trade Organization. </a> </h4>
+              </div>
+              <div id="collapseThree3a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingThree3a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-warning alert-light" href="#">Globalization</a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-warning alert-light" href="#">The role of the agricultural sector in India</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingFour3a">
+                <h4 class="card-title alert alert-info alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFour3a" aria-expanded="false" aria-controls="collapseFour3a"> Financial Institutions - Reserve Bank of India - Monetary Policy, Banking, Financial Sector Reforms - Commercial Banks, Fixed Assets - Financial Markets - Instabilities - Stock Exchanges, SEBI - Indian tax system, recent changes - its impact on goods and services tax, trade, industry - Central and State Economic Relations - Economic Commissions - Distribution of resources - Public loan, Public Expenditure - Directory policy, Budget.</a> </h4>
+              </div>
+              <div id="collapseFour3a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingFour3a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-info alert-light" href="#">Reserve Bank of India </a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-info alert-light" href="#">Monetary Policy </a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingFive3a">
+                <h4 class="card-title alert alert-danger alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive3a" aria-expanded="false" aria-controls="collapseFive3a"> 1) Characteristics / Basic Features of Andhra Pradesh Economy after Partition 2014 - Infection of natural resources, Impact of Separation on State Revenue - River water distribution disputes, Their effect on the irrigation system - New Problems for Industry and Commerce - New Initiatives for Infrastructure Development - Electricity, Transport - Information. Technology, E-Governance - Agriculture, Industries, Policies for development in social sectors, Initiatives - Urbanization, Smart Cities - Skill Development - Employment and social welfare programs. 2) Andhra Pradesh Reorganization Act, 2014 - Financial problems resulting from partition - Central Government Assistance for New Capital Construction, Compensation for loss of income - Development of  Backward Districts - Vizag Railway Zone, Kadapa Steel Factory, Duggarajapatnam Airport - Expressway, Industrial corridors etc. Special status, special assistance - Dispute - Government attitude, action.</a> </h4>
+              </div>
+              <div id="collapseFive3a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingFive3a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-danger alert-light" href="#">E-Governance </a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-danger alert-light" href="#">River water distribution disputes </a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		  <!--------------Social Structure, Issues and Public Policies-------------->
+        <div class=" tab-pane" id="4a">
+          <h3 class="color-primary">Social Structure, Issues and Public Policies</h3>
+          <div class="ms-collapse accordion" role="tablist">
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingOne4a">
+                <h4 class="card-title alert alert-primary alert-light"><a class="collapsed" role="button" data-toggle="collapse" href="#collapseOne4a" aria-expanded="false" aria-controls="collapseOne4a"> General geography: Earth in the solar system,  Earth rotation, Period, Seasons, Earth interior, Important topography, Their characteristics. Climate - Structure, Composition, Climatic factors, factors, Air masses, Air boundaries (fronts), Atmospheric Constraints, Climate change. Oceans: Physical, Chemical, Biological properties, Aquatic Disasters, Marine, Continental Resources.</a></h4>
+              </div>
+              <div id="collapseOne4a" class="card-collapse">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-primary alert-light" href="landing.html"> Climate of India </a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-primary alert-light" href="#" >Humidity - Precipitation </a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingTwo4a">
+                <h4 class="card-title alert alert-warning alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo4a" aria-expanded="false" aria-controls="collapseTwo4a"> Physical geography: World, India, Andhra Pradesh. Significant physical activity, Earthquakes, Landslides, Natural irrigation, Climate change, Regions, Monsoons,  Natural vegetation, National parks, Conservation centers, Significant soil types, Rocks, Minerals. </a> </h4>
+              </div>
+              <div id="collapseTwo4a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingTwo4a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-warning alert-light" href="#"> Major land surface morphologies</a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-warning alert-light" href="#"> Major land surface Soils</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingThree4a">
+                <h4 class="card-title alert alert-info alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree4a" aria-expanded="false" aria-controls="collapseThree4a"> Sociology and Geography: World, India, Andhra Pradesh: Distribution, Density, Growth, Gender Ratio, Literacy, Professional appearance, SC, ST population, Rural-urban divisions, Ethnicities, Tribal, Religious, Language groups, Urbanization, Immigration, Metropolitan areas.</a> </h4>
+              </div>
+              <div id="collapseThree4a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingThree3a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-success btn-raised alert alert-info alert-light" href="#">Gender ratio,</a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-info alert-light" href="#">Literacy</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 card card-default">
+              <div class="card-header" role="tab" id="headingFour4a">
+                <h4 class="card-title alert alert-success alert-light"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFour4a" aria-expanded="false" aria-controls="collapseFour4a">Economic Geography: World, India, Andhra Pradesh: Major Economic Sectors, Agriculture, Industries, Services, Their Key Features, Infrastructure Industries - Agriculture, Minerals, Forests, Energy, Human Based Industries, Transport, Trade, Methods - Problems. </a> </h4>
+              </div>
+              <div id="collapseFour4a" class="card-collapse collapse" role="tabpanel" aria-labelledby="headingFour3a" data-parent=".accordion">
+                <div class="card-body">
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-success alert-light" href="#">India - Agriculture</a> </div>
+                  <div class="btn-group"> <a class="btn btn-default btn-raised alert alert-success alert-light" href="#">India - Industries</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- col-lg-9 --> 
+
+<!-- row --> 
+
+<!-- ms-paper -->
+<div class="clearfix"></div>
+<aside class="ms-footbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ms-footer-col">
+        <div class="ms-footbar-block"> 
+          <!-- <h3 class="ms-footbar-title">Sitemap</h3>-->
+          <ul class="list-unstyled ms-icon-list three_cols">
+            <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+            <li><a href="#"><i class="zmdi zmdi-edit"></i>About-Us</a></li>
+            <li><a href="#"><i class="zmdi zmdi-image-o"></i>Doubts</a></li>
+            <li><a href="#"><i class="zmdi zmdi-case"></i>Online Courses</a></li>
+            <li><a href="#"><i class="zmdi zmdi-time"></i>Video Classes</a></li>
+            <li><a href="page-pricing.html"><i class="zmdi zmdi-money"></i> Practice Exams</a></li>
+            <li><a href="#"><i class="zmdi zmdi-help"></i> CSR Policy</a></li>
+            <li><a href="#"><i class="zmdi zmdi-lock"></i> Terms & Conditions</a></li>
+            <li><a href="#"><i class="zmdi zmdi-email"></i> Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="ms-footbar-block"> 
+          <!--<h3 class="ms-footbar-title">Social Media</h3>-->
+          <div class="ms-footbar-social"> <a href="#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a> <a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a> 
+            <!-- <a href="javascript:void(0)" class="btn-circle btn-youtube"><i class="zmdi zmdi-youtube-play"></i></a>--> 
+            <a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a> <a href="#" class="btn-circle btn-instagram"><i class="zmdi zmdi-instagram"></i></a> 
+            <!--<a href="javascript:void(0)" class="btn-circle btn-github"><i class="zmdi zmdi-github"></i></a>--> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-------------------------footer----------------------------->
+<footer class="ms-footer clearfix">
+  <div class="container">
+    <p class="pull-left">Copyright © 2021 Eenadu All Rights Reserved </p>
+    <p class="pull-right">Powered By Margadarsi Computers</p>
+  </div>
+</footer>
+<div class="btn-back-top"> <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised "><i class="zmdi zmdi-long-arrow-up"></i></a> </div>
+
+<!-------------------------------- slidebar menu-------------------------------- -->
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+  <div class="sb-slidebar-container">
+    <header class="ms-slidebar-header">
+      <div class="ms-slidebar-login"> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account"></i> Login</a> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account-add"></i> Register</a> </div>
+      <div class="ms-slidebar-title">
+        <form class="search-form">
+          <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box-slidebar"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <div class="ms-slidebar-t"> <span class="ms-logo ms-logo-sm">E</span>
+          <h3><span>EENADU</span></h3>
+        </div>
+      </div>
+    </header>
+    <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+      <li class="card" role="tab" id="sch1"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1"> <i class="zmdi zmdi-home"></i> Home </a>
+        <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
+          <li><a href="index.html">Default Home</a></li>
+          <li><a href="home-generic-2.html">Home Black Slider</a></li>
+          <li><a href="home-landing.html">Home Landing Intro</a></li>
+          <li><a href="home-landing3.html">Home Landing Video</a></li>
+          <li><a href="home-shop.html">Home Shop 1</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch2"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2"> <i class="zmdi zmdi-desktop-mac"></i> Pages </a>
+        <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2" data-parent="#slidebar-menu">
+          <li><a href="page-about.html">About US</a></li>
+          <li><a href="page-team.html">Our Team</a></li>
+          <li><a href="page-product.html">Products</a></li>
+          <li><a href="page-services.html">Services</a></li>
+          <li><a href="page-faq.html">FAQ</a></li>
+          <li><a href="page-timeline_left.html">Timeline</a></li>
+          <li><a href="page-contact.html">Contact Option</a></li>
+          <li><a href="page-login.html">Login</a></li>
+          <li><a href="page-pricing.html">Pricing</a></li>
+          <li><a href="page-coming.html">Coming Soon</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch4"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc4"> <i class="zmdi zmdi-edit"></i> Blog </a>
+        <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4" data-parent="#slidebar-menu">
+          <li><a href="blog-sidebar.html">Blog Sidebar 1</a></li>
+          <li><a href="blog-sidebar2.html">Blog Sidebar 2</a></li>
+          <li><a href="blog-masonry.html">Blog Masonry 1</a></li>
+          <li><a href="blog-masonry2.html">Blog Masonry 2</a></li>
+          <li><a href="blog-full.html">Blog Full Page 1</a></li>
+          <li><a href="blog-full2.html">Blog Full Page 2</a></li>
+          <li><a href="blog-post.html">Blog Post 1</a></li>
+          <li><a href="blog-post2.html">Blog Post 2</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch5"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5"> <i class="zmdi zmdi-shopping-basket"></i> E-Commerce </a>
+        <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5" data-parent="#slidebar-menu">
+          <li><a href="ecommerce-filters.html">E-Commerce Sidebar</a></li>
+          <li><a href="ecommerce-filters-full.html">E-Commerce Sidebar Full</a></li>
+          <li><a href="ecommerce-filters-full2.html">E-Commerce Topbar Full</a></li>
+          <li><a href="ecommerce-item.html">E-Commerce Item</a></li>
+          <li><a href="ecommerce-cart.html">E-Commerce Cart</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch6"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc6"> <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
+        <ul id="sc6" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch6" data-parent="#slidebar-menu">
+          <li><a href="portfolio-filters_sidebar.html">Portfolio Sidebar Filters</a></li>
+          <li><a href="portfolio-filters_topbar.html">Portfolio Topbar Filters</a></li>
+          <li><a href="portfolio-filters_sidebar_fluid.html">Portfolio Sidebar Fluid</a></li>
+          <li><a href="portfolio-filters_topbar_fluid.html">Portfolio Topbar Fluid</a></li>
+          <li><a href="portfolio-cards.html">Porfolio Cards</a></li>
+          <li><a href="portfolio-masonry.html">Porfolio Masonry</a></li>
+          <li><a href="portfolio-item.html">Portfolio Item 1</a></li>
+          <li><a href="portfolio-item2.html">Portfolio Item 2</a></li>
+        </ul>
+      </li>
+      <li> <a class="link" href="component-typography.html"><i class="zmdi zmdi-view-compact"></i> UI Elements</a> </li>
+      <li> <a class="link" href="page-all.html"><i class="zmdi zmdi-link"></i> All Pages</a> </li>
+    </ul>
+    <div class="ms-slidebar-social ms-slidebar-block">
+      <h4 class="ms-slidebar-block-title">Social Links</h4>
+      <div class="ms-slidebar-social"> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> <span class="badge-pill badge-pill-pink">12</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> <span class="badge-pill badge-pill-pink">4</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google"><i class="zmdi zmdi-google"></i>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram"><i class="zmdi zmdi-instagram"></i>
+        <div class="ripple-container"></div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/plugins.min.js"></script> 
+<script src="js/app.min.js"></script> 
+<script src="js/configurator.min.js"></script> 
+<script>
+$('#btn-nav-previous').click(function(){
+            $(".menu-inner-box").animate({scrollLeft: "-=100px"});
+        });
+        
+        $('#btn-nav-next').click(function(){
+            $(".menu-inner-box").animate({scrollLeft: "+=100px"});
+        });
+	</script> 
+<script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script> 
+<script src="js/index.js"></script>
+</body>
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:11 GMT -->
+</html>

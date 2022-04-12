@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:10 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#333">
+<title>Eenadu-online Exam</title>
+<meta name="description" content="Material Style Theme">
+<!--<link rel="shortcut icon" href="img/favicon30f4.png?v=3">-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/preload.min.css">
+<link rel="stylesheet" href="css/plugins.min.css">
+<link rel="stylesheet" href="css/style.light-blue-500.min.css">
+<link rel="stylesheet" href="css/width-boxed.min.css" id="ms-boxed" disabled="">
+<link rel="stylesheet" href="css/custom.css">
+<!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!----theme color setting-------> 
+<a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand"><i class="fa fa-gears"></i></a>
+<div id="ms-configurator" class="ms-configurator">
+  <div class="ms-configurator-title">
+    <h3><i class="fa fa-gear"></i>Theme Configurator</h3>
+    <a href="javascript:void(0);" class="ms-conf-btn withripple"><i class="zmdi zmdi-close"></i></a> </div>
+  <div class="panel-group" id="accordion_conf" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-headers">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-collapse-conf-2" aria-expanded="false" aria-controls="ms-collapse-conf-2"> <i class="zmdi zmdi-view-compact"></i>Header Styles</a></h4>
+      </div>
+      <div id="ms-collapse-conf-2" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-headers" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <h6>Header Options</h6>
+          <form class="form-inverse ms-conf-radio" id="header-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="whiteHeader" value="white" checked="cheked">
+                  Light Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="primaryHeader" value="primary">
+                  Primary Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="darkHeader" value="dark">
+                  Dark Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="noHeader" value="hidden">
+                  No Header (Navbar Mode)</label>
+              </div>
+            </div>
+          </form>
+          <h6>Navbar Options</h6>
+          <form class="form-inverse ms-conf-radio" id="navbar-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="whiteNavbar" value="white" checked="">
+                  Light Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="primaryNavbar" value="primary">
+                  Primary Color</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="darkNavbar" value="dark">
+                  Dark Color</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-container">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-conf-collapse-3" aria-expanded="false" aria-controls="ms-conf-collapse-3"> <i class="zmdi zmdi-grid"></i>Container Options</a></h4>
+      </div>
+      <div id="ms-conf-collapse-3" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-container" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <form class="form-inverse ms-conf-radio" id="boxed-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="fullWidth" value="full" checked="">
+                  Full Width</label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="boxedWidth" value="boxed">
+                  Boxed Mode</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----theme color setting end-------> 
+
+<!---------------model login------------------->
+<div id="ms-preload" class="ms-preload">
+  <div id="status">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+</div>
+<div class="ms-site-container"> 
+  <!-- Modal -->
+  <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-block shadow-2dp no-pb">
+          <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+          <div class="modal-title text-center"> <span class="ms-logo ms-logo-white ms-logo-sm mr-1">E</span>
+            <h3 class="no-m ms-site-title"><span>EENADU</span></h3>
+          </div>
+          <div class="modal-header-tabs">
+            <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+              <li class="nav-item" role="presentation"><a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple"><i class="zmdi zmdi-account"></i> Login</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-account-add"></i> Register</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-key"></i> Recovery Pass</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+              <form autocomplete="off">
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user">Username</label>
+                      <input type="text" id="ms-form-user" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass">Password</label>
+                      <input type="password" id="ms-form-pass" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                      <div class="form-group no-mt">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Remember Me </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-raised btn-primary pull-right">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="text-center">
+                <h3>Login with</h3>
+                <a href="j#" class="wave-effect-light btn btn-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> Facebook</a> <a href="#" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> <a href="#" class="wave-effect-light btn btn-raised btn-google"><i class="zmdi zmdi-google"></i> Google</a> </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+              <form>
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user-r">Username</label>
+                      <input type="text" id="ms-form-user-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                      <label class="control-label" for="ms-form-email-r">Email</label>
+                      <input type="email" id="ms-form-email-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-r">Password</label>
+                      <input type="password" id="ms-form-pass-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-rn">Re-type Password</label>
+                      <input type="password" id="ms-form-pass-rn" class="form-control">
+                    </div>
+                  </div>
+                  <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                </fieldset>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+              <fieldset>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                    <label class="control-label" for="ms-form-user-re">Username</label>
+                    <input type="text" id="ms-form-user-re" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                    <label class="control-label" for="ms-form-email-re">Email</label>
+                    <input type="email" id="ms-form-email-re" class="form-control">
+                  </div>
+                </div>
+                <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------model login end-------------------> 
+  
+  <!---------------header------------------>
+  
+  <header class="ms-header ms-header-primary"> 
+    <!--ms-header-primary-->
+    <div class="container container-full">
+      <div class="ms-title"> <a href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-header.png" alt=""> --> 
+        <span class="ms-logo animated zoomInDown animation-delay-5">E</span>
+        <h1 class="animated fadeInRight animation-delay-6"><span>EENADU</span></h1>
+        </a> </div>
+      <div class="header-right">
+        <div class="share-menu">
+          <ul class="share-menu-list">
+            <li class="animated fadeInRight animation-delay-3"><a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a></li>
+            <li class="animated fadeInRight animation-delay-2"><a href="ja#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-instagram"></i></a></li>
+          </ul>
+          <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7"><i class="zmdi zmdi-share"></i></a> </div>
+        <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal"><i class="zmdi zmdi-account"></i></a>
+        <form class="search-form animated zoomInDown animation-delay-9">
+          <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-menu"></i></a> </div>
+    </div>
+  </header>
+  
+  <!---------------header end------------------> 
+  
+  <!--------------main-menu------------------>
+  <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+    <div class="container container-full">
+      <div class="navbar-header"> <a class="navbar-brand" href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> --> 
+        <span class="ms-logo ms-logo-sm">E</span> <span class="ms-title"><strong>EENADU</strong></span> </a> </div>
+      <div class="collapse navbar-collapse" id="ms-navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a href="index.html">Home</a> </li>
+          <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Courses<i class="zmdi zmdi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="ms-tab-menu"> 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs ms-tab-menu-left">
+                  <li class="nav-item"><a class="nav-link active" href="#tab-general" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-home"></i>APPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-landing" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-desktop-windows"></i> Banking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-revolution" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-panorama-horizontal"></i>TSPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-shop" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-store"></i>UPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-profile" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-account"></i>SSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-blog" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-edit"></i> DSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-magazine" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-flip"></i> Insurance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-app" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-smartphone-iphone"></i> Police</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-ads" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-search"></i>Railway</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content ms-tab-menu-right">
+                  <div class="tab-pane active" id="tab-general">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="appsc-group-I.html">Group-I</a></li>
+                      <li><a href="appsc-group-II.html">Group-II</a></li>
+                      <li><a href="#">Panchayat Secretary </a></li>
+                      <li><a href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-landing" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="sbiclerk.html">SBI Clerk </a></li>
+                      <li><a href="#">SBI PO</a></li>
+                      <li><a href="#">SBI Specialist Officer </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-revolution" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a class="with-badge" href="#">Group-I</a></li>
+                      <li><a class="with-badge" href="#">Group-II</a></li>
+                      <li><a class="with-badge" href="#">Group-III</a></li>
+                      <li><a class="with-badge" href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-shop" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">CIVILS</a></li>
+                      <li><a href="#">NDA</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-profile" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ssc-cgl.html">SSC CGL</a></li>
+                      <li><a href="#">SSC CHSL</a></li>
+                      <li><a href="#">SSC Stenographer</a></li>
+                      <li><a href="#">SSC MTS </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-blog" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">TS School Assistant</a></li>
+                      <li><a href="#">TS Secondary Grade Teachers</a></li>
+                      <li><a href="#">TS Telugu Pandit</a></li>
+                      <li><a href="#">AP School Assistant</a></li>
+                      <li><a href="#">AP Secondary Grade Teachers</a></li>
+                      <li><a href="#">AP Telugu Pandit</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-magazine" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">LIC AAO</a></li>
+                      <li><a href="#">LIC ADO</a></li>
+                      <li><a href="#">LIC Assistant</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-ads" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">RRC Group-D</a></li>
+                      <li><a href="#">RRB NTPC </a></li>
+                      <li><a href="#">RRB ALP</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-app" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ts-sub-inspector.html">TS Police SI</a></li>
+                      <li><a href="ts-constable.html">TS Police Constable </a></li>
+                      <li><a href="#">AP Police SI </a></li>
+                      <li><a href="#">AP Police Constable </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a href="onlineexam.html" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">Online Exams</a></li>
+          <li class="nav-item dropdown"> <a href="current-affairs.html" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">GK & Current Affairs</a></li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Study Abroad<i class="zmdi zmdi-chevron-down"></i></a> </li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Careers & Courses</a> </li>
+          <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Institutes</a> </li>
+        </ul>
+      </div>
+      <a href="#" class="ms-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a></div>
+    <!-- container --> 
+  </nav>
+  <div class="ms-hero-page-override ms-hero-img-keyboard ms-hero-bg-primary mb-6">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Privacy-Policy</h1>
+        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus laboriosam, ut placeat autem itaque, possimus illum dicta enim quia. Quam similique voluptate illo debitis corrupti sunt, vitae dicta officia impedit hic. Perferendis, odit consequuntur. </p>
+      </div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-slash">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Privacy-Policy</a></li>
+        </ol>
+      </nav>
+      <div class="btn-group"> </div>
+      <div class="col-md-3 pull-right">
+        <select class="btn btn-success btn-raised">
+          <option>Select Language</option>
+          <option>Telugu</option>
+          <option>English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="card card-hero animated slideInUp animation-delay-8 mb-6">
+    <div class="card-body-big">
+      <h2 class="color-primary">Privacy-Policy</h2>
+      <div class="row">
+        
+      	eenadupratibha.net is an academicportal of Eenadu Digital, a division of Ushodaya Enterprises Private Limited [Ushodaya], aimed at providing content relating to admissions,academics, competitions, entrance and eligibility test, scholarships, job placements, training and all round development of the youth. We understand the importance of your right to privacy, hence have elicited the below privacy statement regarding the information we collect from you. We use a secure server for all payments you make online to Eenadu Digital, to protect the credit card information of our clients and Cookies are used to store the login information. If you have questions or concerns regarding  this  statement,  please email  to  us  on  privacypolicy@eenadupratibha.net.<br>
+      	eenadupratibha.net provides a user-friendly platform for our members to access our content. To be able to use eenadupratibha.net, members create their own unique profiles.<br>
+      	The information collected from any of our members is not shared with any individual or organization without the former’s approval.<br>
+      	Some of the essential information gathered from members and guests who intend to access content and avail various services on eenadupratibha.net includes, but may not be limited to, email address, first name, last name, age, educational qualification  and aspirations, a user-specified password, mailing address, pin code and mobile number.<br>
+      	If members wish to subscribe for paid services with us to, we collect; some additional information from them, including a billing address, a credit card number and a credit card expiration date and tracking information from DDs This information collected from members is NOT shared:<br>
+      	The information gathered from eenadupratibha.net members is shared with any individual or organization only with the consent of the member. Members registering on eenadupratibha.net shall be automatically consenting for receiving calls or Text Messages from eenadupratibha.net.<br>
+      	Except where members are expressly informed, eenadupratibha.net does not sell, rent, or loan any identifiable information at the individual level regarding its customers to any third party. All information provided by members is held with the utmost care and security. However, eenadupratibha.net is also bound to cooperate fully should a situation arise where we are required by law or legal process to provide information about a customer.<br>
+      	To extend the benefits and services on eenadupratibha.net, we may tie-up with third parties/partners with whom we may share your personal information as may be necessary.<br>
+      	<strong>Links to external websites:</strong><br>
+      	eenadupratibha.net may contain links to external websites. Please be aware that eenadupratibha.net does not control the content of such sites and/or the privacy policy of such external sites and shall not be responsible for the privacy practices of external Web sites. We request you to be fully aware of this when you leave eenadupratibha.net. Do read the privacy statements of every such external web site to ascertain if they collect personallyyour identifiable information and act accordingly.<br>
+      	This privacy statement applies solely to information collected by eenadupratibha.net<br>
+      	<strong>Location Data:</strong><br>
+      	Ushodaya may store your information about your location (“Location Data”), which may be used to provide, where necessary and possible, location specific features and Services and/or to improve and customize current Services.  <br>
+      	You can enable or disable location services when you use the Service at any time, through your device settings. <br>
+<strong>Cookies on eenadupratibha.net:</strong><br>
+Cookies on eenadupratibha.net are used to deliver various services and keep track of your personal preferences. If you do not want cookies to collect information on eenadupratibha.net, most browsers contain a function that allows a user to deny cookies on websites. Alternatively, you can also delete all cookie files on your computer. Please note that disabling the cookie feature on your browser or deleting cookie files from your computer will render you unable to access certain features on eenadupratibha.net, as the use of cookies is a necessary part of the eenadupratibha.net net technology. eenadupratibha.net uses cookies only to:<br><br>
+•	Provide its services<br>
+•	Deliver content specific to your interests<br>
+•	Save your password (so you do not have to re-enter it each time you visit different pages on our site) and for other purposes.<br>
+
+Please note: Cookies are used only to recollect information sent to your computer from eenadupratibha.net. We CANNOT access any information not sent by eenadupratibha.net. Some of our partners may use cookies on our site (for example, advertisers).<br>
+However, we have no access to or control over these cookies. 
+<br>
+Changes in eenadupratibha.net privacy policy: Ushodayareserves right to amend the privacy policy of eenadupratibha.net. Users are advised to periodically check our privacy policy for any amends.
+Any sensitive information (such as a credit card number) provided during registration/order process information, is encrypted and is protected with the standard encryption software in the industry - SSL as practiced by respective Payment Gateway.<br>
+Apart from using SSL encryption, eenadupratibha.net takes every measure in its power to protect sensitive information Some of the staff members at eenadupratibha.net are granted access to such personally identifiable information, needed for performing specific tasks (for example, a billing clerk or a customer service representative.)<br>
+You are encouraged to reach out to us, in case of any genuine grievance relating to content.  Please provide the following information in your complaint:<br>
+1.	Full name along with postal residential address, a valid email id and cell phone number. <br>
+2.	Title &amp; date/link of information, news, article or content which is the subject matter of the complaint including identification of information provided by you. <br>
+3.	Clear Statement as to whether the information is personal or sensitive personal information. <br>
+4.	Specify what supporting documents if any are relied upon and attached. <br>
+5.	A declaration that whatever information and/or documents are submitted with the complaint are true, complete and current in all respects and nothing therein is false.<br> 
+6.	A statement, under penalty of perjury, that the information in the notice is accurate, and that the information being complained about belongs to you.<br>
+7.	content@eenadupratibha.net<br>
+The company shall not be responsible for any communication, if addressed, to any non designated person in this regard. <br>
+Please note that complaint must be from someone personally and directly affected by the matter which forms the subject matter of the complaint.   It must not be vexatious, trivial or argumentative.<br>
+<strong>CONTACT</strong><br>
+If you have any questions about this privacy statement, the practices of eenadupratibha.net, or your dealings with this Web site, please email us or contact us at.
+Eenadu Pratibha<br>
+Eenadu Corporate Building, Ramoji Film City, Abdullapurmet Mandal, RangaReddy District- 501512<br>
+For Technical related issues: support@eenadupratibha.net; for advertisements: ____________ etcetc<br>
+Eenadu Pratibha<br>
+6-3-569/3, Eenadu complex, Somajiguda, Hyderabad 500 082<br>
+You are also advised to peruse terms and conditions.<br>
+© 2020 Ushodaya Enterprises Pvt. Ltd., All Rights Reserved. <br>
+<strong>Terms and Conditions</strong><br>
+The visitors are cautioned to read all the terms and conditions under which they can access the eenadupratibha Portal. Only visitors agreeing for these terms may access the site for accessing content or for availing any of the free or paid services offered by the site and/or its partners/ affiliates/ advertisers/ franchisees/ agents/ agencies etc.<br>
+IF YOU DO NOT AGREE TO ANY OF THESE TERMS, YOU ARE ADVISED NOT TO FURTHER ACCESS THE SITE OR REGISTER FOR SUBSCRIBERSHIP.<br>
+This is a legal agreement ("Agreement") between the visitor/Subscriber and Ushodaya Enterprises Private Limited, hereinafter referred to as Ushodaya, the owner and operator of the website:www.eenadupratibha.net through its division called Eenadu Digital, and/or such other web site that may be periodically linked either to this web address or to the home page of Eenadu portal, hereinafter referred jointly and severally as the site.<br>
+Access to the site cannot be had unless and until these terms and conditions are read and consented to.<br>
+<strong> 1. Use and access:</strong><br>
+a. This site is primarily intended to providing content relating to admissions, academics, competitions, entrance and eligibility test, scholarships, job placements, training and all round development of the youth..<br>
+b. The services offered by the site and/or its partners/ affiliates/ advertisers/ franchisees/ agents/ agencies etc. may be accessed and/or used generally by any intending party, irrespective of region, religion, language, caste, creed, community, race, location, etc but subject to the terms and conditions of this agreement.<br>
+c. The visitors/ users/ Subscribers must be majors and should be capable of contracting as per law of the land, where they access the portals. Minors can access the content only under the guidance and consent of their parents or guardians.<br>
+d. They must also submit and subject themselves to the laws of India and to the jurisdiction of law courts at Hyderabad, Telangana, India, for resolution of any dispute arising out of any eventuality related and/or attributable to the information posted in the site or URLs linked to this site.<br>
+e. The users / subscribers shall agree for all such modifications, alterations, deletions, additions to the content or material or lay-out or get-up or colour scheme or features or advertisements that may be made to the site at the discretion of Ushodaya.<br>
+<strong> 2. Subscription: </strong><br>
+a. By registering a profile when called for, one becomes a subscriber of eenadupratibha Portal. The Subscriber can access the content by logging into the portal with their user id and password.<br>
+b. A person who registers himself and who remits the prescribed fees becomes a subscriber, as soon as the fees is duly accepted by Ushodayaand as soon the paid Subscription is activated. Any payment or subscription paid is non-refundable.  Ushodayareserves the right to change subscription and/or membership fees any time without prior notice.<br>
+c. The subscription to the site is only for the sole, exclusive, personal use of the subscriber.<br>
+d. A subscriber cannot authorize others to use his/her Subscribership. A Subscriber cannot make the information on the site, available to anyone else either gratuitously or for any consideration.<br>
+e. The subscription of eenadupratibhaPortal is not transferable and not assignable to any third party. It cannot to be assigned, transferred or licensed or used by any person/entity other than a registered Subscriber.<br>
+f. The subscriber is cautioned that any distribution of any material from Eenadupratibha.net either downloaded or otherwise converted into a distributable format using any technology would amount to infringement of copyright of the content owned by Ushodaya and the company shall initiate strict legal action against persons involved in such distribution or redistribution.<br>
+g. Ushodaya imparts online courses on eenadupratibha portal on paid subscription basis. Ushodaya reserves the right to reject any application for subscription or to suspend or cancel any subscription at their discretion, for any indiscipline by the subscriber. The decision of Ushodaya to suspend or cancel any subscription is final and shall not be questioned. Revocation of such suspension or cancellation shall be at the discretion of Ushodaya and may be subject to conditions and penalty.<br>
+h. Commercial use of information is strictly prohibited.<br>
+i. The subscriber shall not alter or delete any material that is displayed on the portal nor shall the subscriber do or caused to be done anything that may damage the material posted on the portal or that may jeopardize any system or device attached or connected to the portal or the server of Ushodaya.<br>
+j. The subscriber who does or cause to be done any objectionable/illegal act shall render himself/herself liable for all legal consequences thereto and shall also be liable to indemnify Ushodayaagainst any costs and consequences arising out of such objectionable / illegal acts of the subscriber to third parties.<br>
+3. The individuals seeking Subscribership may, at the discretion of Ushodayabe asked to furnish proof of their age, residence, nationality, academic qualifications, other credentials claimed and such other information, before granting access to the site or Subscription. Ushodayahas the right to do a reference check in order to establish the credentials of the Subscriber before activating the profile on the website. Ushodayashall not furnish any material or information displayed on the site to anyone.<br>
+<strong>4. PROFILE:</strong><br>	
+a. A profile of a subscriber is created by filling up the application online.<br>
+b. Subscriber may upload his/her photograph, when such a facility is made available, subject to technical feasibility.<br>
+<strong>5. DEACTIVATION /DELETION OF PROFILE:</strong>
+a. Profile of a paid Subscriber will be automatically deactivated if not renewed before expiry or upon non-payment of subscription fee, if any.<br>
+b. Profile of a subscriber will be automatically deleted if it is inactive for 6 months.<br>
+c. Ushodaya reserves the right to deactivate any subscription, without assigning any reason.<br>
+<strong> 6. CANCELLATION OF SUBSCRIPTION:</strong><br>
+a. Ushodayareserves unfettered right to cancel any subscription at any stage, without assigning any reason whatsoever. The Subscriber who thus forfeits the Subscribership shall not have any claim whatsoever either for the refund of Subscribership fee paid if any or any material given or any information furnished to Ushodaya.<br>
+b. A subscription will automatically be cancelled if any abusive, obscene or sexually oriented message/s or photo/s or video/s are sent by any Subscriber to other Subscribers or if such material is added to any profile. Such Subscribers shall not be entitled for any compensation from Ushodaya Enterprises Private Limited.<br>
+<strong> 7. TERMINATION OF AGREEMENT:</strong><br>
+This agreement can be terminated by either of the parties at any time, for any reason without notice to the other party. This right is without prejudice to the right of Ushodayato suspend or terminate the access of the Subscriber to the site without notice for any breach of this Agreement.<br>
+<strong>8. SCHEMES:</strong><br>
+Ushodayamay offer periodically, different types of schemes on the site, for the convenience of all the Subscribers, each with their own distinct benefits. Ushodayareserves the right to modify, amend, alter, change or discontinue the schemes at their absolute discretion. Subscribers are advised to refer Subscribership plans for current schemes.<br>
+<strong>9. COMMENTS:</strong><br>
+Ushodayamay permit posting of comments on the content or as feedback.   All such comments shall be gentle and polite.  No offensive, obscene, expletive language shall be used.  Ushodayashall moderate and remove any objectionable comments. <br>
+<strong>10. ONLINE CHAT:</strong><br>
+Ushodayamay provide special services like ‘online chatting’, etc to Subscribers. The ‘online chat’ feature is primarily provided to facilitate online contact of two Subscribers. Ushodayadoes not record or otherwise store any data transferred during ‘online chatting’ by Subscribers. Subscribers shall be personally responsible and liable for their conduct, behaviour, language used, and information transferred safety, security, privacy on ‘online chat’. Any objectionable conduct or behavior entails penal consequences apart from cancellation of Subscribership and deactivation of all services.<br>
+<strong>11. ONLINE TESTS, HOMEWORK, PROJECTS: </strong><br>
+a)Ushodayamayconduct online tests or give homework and projects for submission by users online. b) The users shall adhere to the technological specifications issued for the purpose of uploading their material and Ushodaya shall not be responsible for any technical glitch on the site that might prevent uploading of material by the user.<br> 
+c) Any grading or ranking given by Ushodaya faculty in any mock test or homework or project shall not be questioned by any user.<br>
+d) While an endeavour is made to review any work of the user upon a request made, Ushodaya shall be under no obligation to review the work of any user as of a right or as an obligation. Any refusal by Ushodaya to review the work of a user shall not be questioned.<br>
+
+<strong>OWNERSHIP:</strong><br>
+a. This site is owned and operated by Eenadu Digital, a division of Ushodaya Enterprises Private Limited, which is a Company in Ramoji Group. The Company hereby reserves the right to change or discontinue any service, feature, offer, gift, contest, design, layout, content, platform, equipment, systems, programme, software needed for the access or use of the site including Subscriber’s area.<br>
+b. Ushodayareserves their right to make such modifications, alterations, deletions, additions to the content or material or lay-out or get-up or colour scheme or features or advertisements, from time to time.<br>
+c. USHODAYA also reserves all their right to upgrade or down grade the technology or platforms deployed by them in the portal and the subscribers shall have no objection for any such up-gradation and down-gradation of technology or change of platforms or deployment of new technology.<br>
+<strong>12. DUTIES AND OBLIGATIONS OF VISITORS AND SUBSCRIBERS:</strong><br>
+a. The Subscribers shall furnish truthful, authentic, genuine, relevant, valid, correct, current and fair information.<br>
+b. The Subscribers shall provide proof as may be required by USHODAYA to substantiate the information furnished.<br>
+c. Every Subscriber impliedly undertakes personal responsibility and liability as to the correctness, authenticity, genuineness of the information furnished for display on site.<br>
+d. The onus of proving the correctness of information furnished and/or displayed on the site lies on the concerned Subscribers.<br>
+e. The onus of proving that the information is wrong lies on the Subscribers/third parties asserting, relying on/using the information.<br>
+f. The Subscribers availing online chat facility shall not misuse or misbehave with other Subscribers.<br>
+g. The Subscribers or non-Subscribers availing any services from third party vendors adverting on the portal are advised to make independent verification of the product or service. Ushodayashall not be responsible or liable for any misrepresentation or falsity of information on the site.<br>
+<strong>13. ERRORS AND DISCREPANCIES:</strong><br>
+While Ushodayatakes every care and caution to maintain the site free of errors and discrepancies, it is possible for some mistakes to creep into the site by inadvertence, oversight, human error, innocence and honest belief in the information in good faith. Ushodayashall not be liable in respect of innocent dissemination of such information and the liability of Ushodayais limited to removal of such errors and discrepancies from the site. Subscribers and visitors may bring any such discrepancies to the notice of Ushodayawith reasonable proof for necessary action.<br>
+<strong>14. INTELLECTUAL PROPERTY RIGHTS:</strong><br>
+The intellectual property rights in the site like Trademarks, copyright in artistic works, photographs, creative, graphics, layout, design, text, video, audio etc shall exclusively vest in Ushodaya. Any violation of such Intellectual Property Rights of Ushodayaby copying, publishing, distributing, modifying, transferring, altering, imposing, defacing shall be punishable under Law, including Copyright laws. Ushodayasources material and photographs from reputed agencies on agreement of non-commercial use and non-distribution of the material and photographs. The Subscribers are advised not to down load any images or material from Eenadu Portal and any use of the images down loaded from Eenadu Portalsshall amount to infringement of copyright of the owner of the photographs and shall entail penal consequences. The Intellectual Property rights in various trademarks, logos, photographs, text and other material posted on Eenadupratibha Portal and any use of the same by the subscribers for whatever purpose would infringe upon the Intellectual Property Rights of the owners of the material including Ushodaya. Subscribers are cautioned against use of any intellectual property down loaded from EenadupratibhaPortal.<br>
+15. Copying, storage, transmission, circulation of any information including photographs, profiles, code numbers, Subscribership numbers, addresses, etc displayed on the site, is strictly prohibited.<br>
+16. Some of the material which is procured by Ushodayafrom third parties by way of licence may be protected by International Copyright laws, violation of which would entail penal consequences under international laws.<br>
+17. The Subscribers/visitors shall be solely responsible and liable for all the consequences arising out of any infringement of copyrights, proprietary rights including but not limited to damages, attorney fees and expenses.<br>
+<strong>18. ADVERTISEMENTS:</strong><br>
+a. Ushodayapublishes advertisements on the Eenadu Portal on “as is where is” basis. Ushodayashall not endorse any products or services, advertised on Eenadu Portal nor do they vouch about the quality, quantity, utility of the product/services, advertised on Eenadu Portal the users / consumers are advised to cross-verify the genuineness, quality, quantity, utility and other attributes of the products / services advertised on Eenadu Portal.<br>
+b. Ushodayadoes not vouch about the genuineness, qualification, age, region, sex, religion, caste of any person whose profile is advertised in the matrimonial columns of Eenadu Portal. Individuals are advised and cautioned to cross-verify all the claims made in the matrimonial advertisements before fixing up the alliance. Ushodayashall not be responsible or liable for any misrepresentation made in any such matrimonial advertisements.<br>
+c. Ushodayashall not undertake any responsibility for display of any erroneous or unauthorized material or information on the site and the liability of Ushodayain case of any such display shall be limited to the removal of such information or material from the site and providing the details of the Subscribership account from where the offending information or material is found to have been uploaded to the site as per the records of Ushodaya.<br>
+d. Ushodayashall be at liberty to run/display advertisements in Eenadu Portal in various forms, namely pop-ups, scrolls, tickers, buttons, paid links, ear panels, banner ads etc., The subscriber shall not have objection for running all such advertisements on EenadupratibhaPortal.<br>
+e. Ushodayamay distribute mail ids of the subscribers to their sister concerns for promotional activity. The subscribers by default are construed to have agreed for distribution of their mail ids to the sister concerns of Ushodayaonly for promotional purpose. The subscribers are however at liberty to advise appropriately to the concerned, if they do not desire to receive the promotional material, by opting out of the direct mailers.<br>
+19. The Subscribership/access to the site is available subject to the condition that the site is accessed/used at the sole risk of the Subscriber/visitor. Ushodayacannot and does not guarantee about the availability of connection to the site, the services, and facilities nor does it assure any accuracy, quality, quantity, genuineness and promptness of any of the services offered on the site.<br>
+20. While every endeavour is made to make the site free of any bugs, errors, viruses, failures, delay in transmission etc. Ushodayadoes not guarantee that the site or any of the services offered would be free of bugs, errors, viruses, failures and Ushodayadoes not accept any responsibility or liability for any such bugs, errors, viruses, failures delay in transmission etc in the site.<br>
+21. Ushodayareserves the right to make such additions, alterations, modifications, insertions, improvements to the site for the betterment and quality enhancement of the material displayed on the site. The Subscribers shall also agree for such modifications to the material for compatibility with the technological advancement and shall, without demur, agree for any changes that may be required to be made at the discretion of Ushodayaand also provide such information or material that may required for updation or upgradation of the site in view of any technological advancement.<br>
+<strong>22. INDEMNITY:</strong><br>
+a. The Subscribers shall indemnify Ushodayaagainst any claims by third parties against USHODAYA in respect of any material posted by them on the site or any claim made by them in the profile.<br>
+b. The Subscribers shall indemnify Ushodayaagainst any claims by third parties in respect of infringements of any Intellectual Property Rights in respect of and/or in relation to any material posted by them on the site.?<br>
+<strong>23. DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY:</strong><br>
+a. This site is provided by Ushodayaon an "as is" and "as available" basis. USHODAYA makes no representations or warranties of any kind, express or implied, as to the operation of this site or the authenticity of the information, content, materials, or products included on this site. The visitor/Subscriber expressly agrees that his/her use of this site is at his/her sole risk.<br>
+b. Ushodayadoes not warrant that this site, its servers, or e-mail sent from this site are free of viruses or other harmful components. Ushodayawill not be liable for any damages of any kind arising from the use of this site, including, but not limited to direct, indirect, incidental, punitive, and consequential damages.<br>
+c. Ushodayadoes not give any warranty whatsoever either express or implied, for any advertisement material displayed on the site as to the quality, quantity, utility, originality, genuineness, legality, punctuality of any goods or services offered by Ushodayaor its agents, business affiliates, associates, agencies, franchisees etc. Ushodayaalso does not give any warranty whatsoever either express or implied, of any disruption, interruption, breakdown of the site or services offered by USHODAYA or its agents, business affiliates, associates, agencies, franchisees etc.<br>
+d. Ushodayashall not be liable for any damages to any Subscribers or visitors or users or third parties for any injury or damage or hardship sustained by them on account of any error, failure, discrepancy, defect, shortfall, misdescription; any bugs, errors, viruses, failures delay in transmission etc in the site; any defamatory, offensive, excessive, exaggerated, false, malafide, inaccurate, erroneous, blasphemous, obscene, profane, pirated, offensive, salacious, ghastly, indecent, racial or illegal material on the site. The Subscribers / visitors/users of the site specifically agree to this and discharge USHODAYA from any liability whatsoever for the said acts.<br>
+e. None of the staff or directors or officers or employees or agents of Ushodayashall be liable in any manner whatsoever, for any of the claims of a Subscriber for any loss, damage, costs, expenses sustained or likely to be sustained by him/her, by the use and access of the site.<br>
+f. All articles, stories, information, news, views, incidents, occurrences etc and any predictions, horoscopes, information that may be posted or displayed on the site are purely that of the respective authors. Subscribers/ visitors/users are requested to crosscheck the information from sources that are most reliable and trusted in their personal opinion. Ushodayashall not be liable for any action, damages, indemnity, cost, expenses that the Subscribers/visitors/ users may have sustained or incurred from the use of such information.<br>
+g. Ushodayashall not be responsible or liable for any inaccurate, false, excessive, outdated, irrelevant information displayed or posted on the site at the instance of a Subscriber.<br>
+h. Ushodayashall not be responsible in any manner whatsoever for any errors, discrepancies, and falsities in the information furnished by the Subscribers and displayed on the site.<br>
+i. Ushodayashall not in any manner be responsible for any infringement and Intellectual Property rights of any third parties by Subscribers.<br>
+j. All articles, stories, features, news, views and opinions, occurrences, incidents displayed on Eenadu Portal are supplied by various agencies, written by respective authors and USHODAYA does not assume any responsibility or liability for any inaccuracy in any of the material posted on the website. The aggrieved parties are advised to address their grievances if any, to the concerned authority as indicated elsewhere in the portal. The Staff and Management, Directors of Ushodayashall not be personally liable for any inaccuracy in the material posted on the website.<br>
+k. all articles on finance are being sourced from qualified professionals. However, investors are cautioned to exercise caution and act only on professional advise , but not on the articles.<br>  
+m. Ushodaya, their staff, employees, directors etc., shall not be liable for any inaccuracy in horoscope or prediction or financial related information,  investment opportunities, job opportunities; education opportunities; results of examinations; government notifications etc (information) appearing in the portal. Ushodaya, their staff, employees, directors etc., shall not be liable for any consequent loss, damage, inconvenience caused to any member of the public by such information.<br>
+n. Information relating to services like bus, train, flight are provided on best effort basis on the basis available information obtained by the staff of Ushodaya. Members of public is advised and cautioned to cross-check the information relating to the timings etc,. Causalities in information relating to accidents, information relating to causalities in any such accidents from link sources. Ushodaya, their staff, directors shall not be responsible for any inaccurate information.<br>
+<strong>24.Force Majeure:</strong><br>
+Ushodayawill endeavour to provide regular and uninterrupted access to the Portal.  However, we shall not be responsible or liable for any interruption, delay or disconnection due to any reason including force majeure or acts of God.<br><br>
+
+© 2020 Ushodaya Enterprises Pvt. Ltd., All Rights Reserved. <br><br>
+
+
+      </div>
+      <hr class="dotted">
+    </div>
+  </div>
+</div>
+<!-- col-lg-9 --> 
+
+<!-- row --> 
+
+<!-- ms-paper -->
+<div class="clearfix"></div>
+<aside class="ms-footbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ms-footer-col">
+        <div class="ms-footbar-block"> 
+          <!-- <h3 class="ms-footbar-title">Sitemap</h3>-->
+          <ul class="list-unstyled ms-icon-list three_cols">
+            <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+            <li><a href="#"><i class="zmdi zmdi-edit"></i>About-Us</a></li>
+            <li><a href="#"><i class="zmdi zmdi-image-o"></i>Doubts</a></li>
+            <li><a href="#"><i class="zmdi zmdi-case"></i>Online Courses</a></li>
+            <li><a href="#"><i class="zmdi zmdi-time"></i>Video Classes</a></li>
+            <li><a href="page-pricing.html"><i class="zmdi zmdi-money"></i> Practice Exams</a></li>
+            <li><a href="#"><i class="zmdi zmdi-help"></i> CSR Policy</a></li>
+            <li><a href="#"><i class="zmdi zmdi-lock"></i> Terms & Conditions</a></li>
+            <li><a href="#"><i class="zmdi zmdi-email"></i> Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="ms-footbar-block"> 
+          <!--<h3 class="ms-footbar-title">Social Media</h3>-->
+          <div class="ms-footbar-social"> <a href="#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a> <a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a> 
+            <!-- <a href="javascript:void(0)" class="btn-circle btn-youtube"><i class="zmdi zmdi-youtube-play"></i></a>--> 
+            <a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a> <a href="#" class="btn-circle btn-instagram"><i class="zmdi zmdi-instagram"></i></a> 
+            <!--<a href="javascript:void(0)" class="btn-circle btn-github"><i class="zmdi zmdi-github"></i></a>--> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-------------------------footer----------------------------->
+<footer class="ms-footer clearfix">
+  <div class="container">
+    <p class="pull-left">Copyright © 2021 Eenadu All Rights Reserved </p>
+    <p class="pull-right">Powered By Margadarsi Computers</p>
+  </div>
+</footer>
+<div class="btn-back-top"> <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised "><i class="zmdi zmdi-long-arrow-up"></i></a> </div>
+
+<!-------------------------------- slidebar menu-------------------------------- -->
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+  <div class="sb-slidebar-container">
+    <header class="ms-slidebar-header">
+      <div class="ms-slidebar-login"> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account"></i> Login</a> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account-add"></i> Register</a> </div>
+      <div class="ms-slidebar-title">
+        <form class="search-form">
+          <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box-slidebar"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <div class="ms-slidebar-t"> <span class="ms-logo ms-logo-sm">E</span>
+          <h3><span>EENADU</span></h3>
+        </div>
+      </div>
+    </header>
+    <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+      <li class="card" role="tab" id="sch1"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1"> <i class="zmdi zmdi-home"></i> Home </a>
+        <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
+          <li><a href="index.html">Default Home</a></li>
+          <li><a href="home-generic-2.html">Home Black Slider</a></li>
+          <li><a href="home-landing.html">Home Landing Intro</a></li>
+          <li><a href="home-landing3.html">Home Landing Video</a></li>
+          <li><a href="home-shop.html">Home Shop 1</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch2"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2"> <i class="zmdi zmdi-desktop-mac"></i> Pages </a>
+        <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2" data-parent="#slidebar-menu">
+          <li><a href="page-about.html">About US</a></li>
+          <li><a href="page-team.html">Our Team</a></li>
+          <li><a href="page-product.html">Products</a></li>
+          <li><a href="page-services.html">Services</a></li>
+          <li><a href="page-faq.html">FAQ</a></li>
+          <li><a href="page-timeline_left.html">Timeline</a></li>
+          <li><a href="page-contact.html">Contact Option</a></li>
+          <li><a href="page-login.html">Login</a></li>
+          <li><a href="page-pricing.html">Pricing</a></li>
+          <li><a href="page-coming.html">Coming Soon</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch4"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc4"> <i class="zmdi zmdi-edit"></i> Blog </a>
+        <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4" data-parent="#slidebar-menu">
+          <li><a href="blog-sidebar.html">Blog Sidebar 1</a></li>
+          <li><a href="blog-sidebar2.html">Blog Sidebar 2</a></li>
+          <li><a href="blog-masonry.html">Blog Masonry 1</a></li>
+          <li><a href="blog-masonry2.html">Blog Masonry 2</a></li>
+          <li><a href="blog-full.html">Blog Full Page 1</a></li>
+          <li><a href="blog-full2.html">Blog Full Page 2</a></li>
+          <li><a href="blog-post.html">Blog Post 1</a></li>
+          <li><a href="blog-post2.html">Blog Post 2</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch5"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5"> <i class="zmdi zmdi-shopping-basket"></i> E-Commerce </a>
+        <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5" data-parent="#slidebar-menu">
+          <li><a href="ecommerce-filters.html">E-Commerce Sidebar</a></li>
+          <li><a href="ecommerce-filters-full.html">E-Commerce Sidebar Full</a></li>
+          <li><a href="ecommerce-filters-full2.html">E-Commerce Topbar Full</a></li>
+          <li><a href="ecommerce-item.html">E-Commerce Item</a></li>
+          <li><a href="ecommerce-cart.html">E-Commerce Cart</a></li>
+        </ul>
+      </li>
+      <li class="card" role="tab" id="sch6"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc6"> <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
+        <ul id="sc6" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch6" data-parent="#slidebar-menu">
+          <li><a href="portfolio-filters_sidebar.html">Portfolio Sidebar Filters</a></li>
+          <li><a href="portfolio-filters_topbar.html">Portfolio Topbar Filters</a></li>
+          <li><a href="portfolio-filters_sidebar_fluid.html">Portfolio Sidebar Fluid</a></li>
+          <li><a href="portfolio-filters_topbar_fluid.html">Portfolio Topbar Fluid</a></li>
+          <li><a href="portfolio-cards.html">Porfolio Cards</a></li>
+          <li><a href="portfolio-masonry.html">Porfolio Masonry</a></li>
+          <li><a href="portfolio-item.html">Portfolio Item 1</a></li>
+          <li><a href="portfolio-item2.html">Portfolio Item 2</a></li>
+        </ul>
+      </li>
+      <li> <a class="link" href="component-typography.html"><i class="zmdi zmdi-view-compact"></i> UI Elements</a> </li>
+      <li> <a class="link" href="page-all.html"><i class="zmdi zmdi-link"></i> All Pages</a> </li>
+    </ul>
+    <div class="ms-slidebar-social ms-slidebar-block">
+      <h4 class="ms-slidebar-block-title">Social Links</h4>
+      <div class="ms-slidebar-social"> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> <span class="badge-pill badge-pill-pink">12</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> <span class="badge-pill badge-pill-pink">4</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google"><i class="zmdi zmdi-google"></i>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram"><i class="zmdi zmdi-instagram"></i>
+        <div class="ripple-container"></div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/plugins.min.js"></script> 
+<script src="js/app.min.js"></script> 
+<script src="js/configurator.min.js"></script> 
+<script>
+$('#btn-nav-previous').click(function(){
+            $(".menu-inner-box").animate({scrollLeft: "-=100px"});
+        });
+        
+        $('#btn-nav-next').click(function(){
+            $(".menu-inner-box").animate({scrollLeft: "+=100px"});
+        });
+	</script> 
+<script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script> 
+<script src="js/index.js"></script>
+</body>
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:11 GMT -->
+</html>

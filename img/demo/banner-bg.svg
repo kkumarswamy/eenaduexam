@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="372" viewBox="0 0 1440 372">
+    <defs>
+        <linearGradient id="b" x1="100%" x2="0%" y1="46.678%" y2="46.678%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#6236FF"/>
+        </linearGradient>
+        <path id="a" d="M1 0h1440v371H1z"/>
+        <path id="c" d="M1 0h1440v371H1z"/>
+        <linearGradient id="d" x1="101.504%" x2="0%" y1="49.314%" y2="51.326%">
+            <stop offset="0%" stop-opacity="0"/>
+            <stop offset="100%"/>
+        </linearGradient>
+        <linearGradient id="e" x1="70.989%" x2="39.503%" y1="46.697%" y2="53.303%">
+            <stop offset="0%" stop-opacity="0"/>
+            <stop offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-1)">
+        <use fill="url(#b)" fill-rule="nonzero" xlink:href="#a"/>
+        <g opacity=".7" style="mix-blend-mode:soft-light">
+            <path fill="url(#d)" fill-rule="nonzero" d="M1 .082C338.965.082 507.948.06 507.948.016 634.385 96.323 713.108 186.496 844 161.063c164.708-42.654 246.513-102.635 351.229-156.173 3.101-1.55 9.312-4.6 9.312-4.6s236.59-.1 236.888 0c0 0 0 370.71-.27 369.71 0 0-8.29 0-8.431-.283-8.06-16.302-14.572-33.608-19.216-51.961-59.81-234.018-421.444 53.244-421.444 52.322.737-.361-527.53-.361-527.051-.088.153.088-29.73-17.662-43.88-26.81-94.626-61.673-160.085-127.757-260.603-146.68-53.322-11-121.434-3-158.534 5.881" opacity=".448" transform="translate(0 1)"/>
+            <path fill="url(#e)" fill-rule="nonzero" d="M.999.082s189.3-.082 189.3 0C266.715 12.372 354.711 37.53 431.1 87.735 613.181 207.4 617 289.963 827 289c180.643-.828 354.643-209.16 614-217.839-.13.351.387 298.766 0 298.839 0 0-23.845-.243-23.894-.372a178.172 178.172 0 0 1-3.585-10.227c-48.891-154.321-150.204-76.165-307.484 10.356 0 0-796.363.743-797.134.347-48.722-25.02-95.92-46.58-148.41-55.604-54.82-9.425-114.628-4.75-159.494 14.5V.082z" opacity=".302" transform="translate(0 1)"/>
+        </g>
+    </g>
+</svg>

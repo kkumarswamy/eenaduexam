@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:10 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#333">
+<title>Eenadu-online Exam</title>
+
+<!--<link rel="shortcut icon" href="img/favicon30f4.png?v=3">-->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<link rel="stylesheet" href="css/preload.min.css">
+<link rel="stylesheet" href="css/plugins.min.css">
+<link rel="stylesheet" href="css/style.light-blue-500.min.css">
+<link rel="stylesheet" href="css/width-boxed.min.css" id="ms-boxed" disabled="">
+<link rel="stylesheet" href="css/custom.css">
+<!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!----theme color setting-------> 
+<a href="#" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand"><i class="fa fa-gears"></i></a>
+<div id="ms-configurator" class="ms-configurator">
+  <div class="ms-configurator-title">
+    <h3><i class="fa fa-gear"></i> Theme Configurator</h3>
+    <a href="#" class="ms-conf-btn withripple"><i class="zmdi zmdi-close"></i></a> </div>
+  <div class="panel-group" id="accordion_conf" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-headers">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-collapse-conf-2" aria-expanded="false" aria-controls="ms-collapse-conf-2"> <i class="zmdi zmdi-view-compact"></i> Header Styles</a></h4>
+      </div>
+      <div id="ms-collapse-conf-2" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-headers" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <h6>Header Options</h6>
+          <form class="form-inverse ms-conf-radio" id="header-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="whiteHeader" value="white" checked="cheked">
+                  Light Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="primaryHeader" value="primary">
+                  Primary Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="darkHeader" value="dark">
+                  Dark Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customHeader" id="noHeader" value="hidden">
+                  No Header (Navbar Mode) </label>
+              </div>
+            </div>
+          </form>
+          <h6>Navbar Options</h6>
+          <form class="form-inverse ms-conf-radio" id="navbar-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="whiteNavbar" value="white" checked="">
+                  Light Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="primaryNavbar" value="primary">
+                  Primary Color </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customNavbar" id="darkNavbar" value="dark">
+                  Dark Color </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="ms-conf-header-container">
+        <h4 class="panel-title"> <a class="collapsed withripple" role="button" data-toggle="collapse" href="#ms-conf-collapse-3" aria-expanded="false" aria-controls="ms-conf-collapse-3"> <i class="zmdi zmdi-grid"></i> Container Options </a> </h4>
+      </div>
+      <div id="ms-conf-collapse-3" class="card-collapse collapse" role="tabpanel" aria-labelledby="ms-conf-header-container" data-parent="#accordion_conf">
+        <div class="panel-body">
+          <form class="form-inverse ms-conf-radio" id="boxed-config">
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="fullWidth" value="full" checked="">
+                  Full Width </label>
+              </div>
+              <div class="radio radio-primary">
+                <label>
+                  <input type="radio" name="customWidth" id="boxedWidth" value="boxed">
+                  Boxed Mode </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----theme color setting end-------> 
+
+<!---------------model login------------------->
+<div id="ms-preload" class="ms-preload">
+  <div id="status">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+</div>
+<div class="ms-site-container"> 
+  <!-- Modal -->
+  <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-block shadow-2dp no-pb">
+          <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+          <div class="modal-title text-center"> <span class="ms-logo ms-logo-white ms-logo-sm mr-1">E</span>
+            <h3 class="no-m ms-site-title"><span>EENADU</span></h3>
+          </div>
+          <div class="modal-header-tabs">
+            <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+              <li class="nav-item" role="presentation"><a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple"><i class="zmdi zmdi-account"></i> Login</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-account-add"></i> Register</a></li>
+              <li class="nav-item" role="presentation"><a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple"><i class="zmdi zmdi-key"></i> Recovery Pass</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+              <form autocomplete="off">
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user">Username</label>
+                      <input type="text" id="ms-form-user" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass">Password</label>
+                      <input type="password" id="ms-form-pass" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                      <div class="form-group no-mt">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Remember Me </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-raised btn-primary pull-right">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="text-center">
+                <h3>Login with</h3>
+                <a href="j#" class="wave-effect-light btn btn-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> Facebook</a> <a href="#" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> <a href="#" class="wave-effect-light btn btn-raised btn-google"><i class="zmdi zmdi-google"></i> Google</a> </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+              <form>
+                <fieldset>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                      <label class="control-label" for="ms-form-user-r">Username</label>
+                      <input type="text" id="ms-form-user-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                      <label class="control-label" for="ms-form-email-r">Email</label>
+                      <input type="email" id="ms-form-email-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-r">Password</label>
+                      <input type="password" id="ms-form-pass-r" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                      <label class="control-label" for="ms-form-pass-rn">Re-type Password</label>
+                      <input type="password" id="ms-form-pass-rn" class="form-control">
+                    </div>
+                  </div>
+                  <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                </fieldset>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+              <fieldset>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                    <label class="control-label" for="ms-form-user-re">Username</label>
+                    <input type="text" id="ms-form-user-re" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="input-group"> <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                    <label class="control-label" for="ms-form-email-re">Email</label>
+                    <input type="email" id="ms-form-email-re" class="form-control">
+                  </div>
+                </div>
+                <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------model login end-------------------> 
+  
+  <!---------------header------------------>
+  
+  <header class="ms-header ms-header-primary"> 
+    <!--ms-header-primary-->
+    <div class="container container-full">
+      <div class="ms-title"> <a href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-header.png" alt=""> --> 
+        <span class="ms-logo animated zoomInDown animation-delay-5">E</span>
+        <h1 class="animated fadeInRight animation-delay-6"><span>EENADU</span></h1>
+        </a> </div>
+      <div class="header-right">
+        <div class="share-menu">
+          <ul class="share-menu-list">
+            <li class="animated fadeInRight animation-delay-3"><a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a></li>
+            <li class="animated fadeInRight animation-delay-2"><a href="ja#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+            <li class="animated fadeInRight animation-delay-1"><a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-instagram"></i></a></li>
+          </ul>
+          <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7"><i class="zmdi zmdi-share"></i></a> </div>
+        <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal"><i class="zmdi zmdi-account"></i></a>
+        <form class="search-form animated zoomInDown animation-delay-9">
+          <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-menu"></i></a> 
+		
+		<a href="notification.html" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10"><i class="zmdi zmdi-notifications"></i></a>
+		</div>
+    </div>
+  </header>
+  
+  <!---------------header end------------------> 
+  
+  <!--------------main-menu------------------>
+  <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+    <div class="container container-full">
+      <div class="navbar-header"> <a class="navbar-brand" href="index.html"> 
+        <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> --> 
+        <span class="ms-logo ms-logo-sm">E</span> <span class="ms-title"><strong>EENADU</strong></span> </a> </div>
+      <div class="collapse navbar-collapse" id="ms-navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a href="index.html">Home</a> </li>
+          <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Courses<i class="zmdi zmdi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="ms-tab-menu"> 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs ms-tab-menu-left">
+                  <li class="nav-item"><a class="nav-link active" href="#tab-general" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-home"></i>APPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-landing" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-desktop-windows"></i> Banking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-revolution" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-panorama-horizontal"></i>TSPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-shop" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-store"></i>UPSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-profile" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-account"></i>SSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-blog" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-edit"></i> DSC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-magazine" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-flip"></i> Insurance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-app" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-smartphone-iphone"></i> Police</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab-ads" data-hover="tab" data-toggle="tab" role="tab"><i class="zmdi zmdi-search"></i>Railway</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content ms-tab-menu-right">
+                  <div class="tab-pane active" id="tab-general">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="appsc-group-I.html">Group-I</a></li>
+                      <li><a href="appsc-group-II.html">Group-II</a></li>
+                      <li><a href="#">Panchayat Secretary </a></li>
+                      <li><a href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-landing" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="sbiclerk.html">SBI Clerk </a></li>
+                      <li><a href="#">SBI PO</a></li>
+                      <li><a href="#">SBI Specialist Officer </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-revolution" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a class="with-badge" href="#">Group-I</a></li>
+                      <li><a class="with-badge" href="#">Group-II</a></li>
+                      <li><a class="with-badge" href="#">Group-III</a></li>
+                      <li><a class="with-badge" href="#">Group-IV</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-shop" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">CIVILS</a></li>
+                      <li><a href="#">NDA</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-profile" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ssc-cgl.html">SSC CGL</a></li>
+                      <li><a href="#">SSC CHSL</a></li>
+                      <li><a href="#">SSC Stenographer</a></li>
+                      <li><a href="#">SSC MTS </a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-blog" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">TS School Assistant</a></li>
+                      <li><a href="#">TS Secondary Grade Teachers</a></li>
+                      <li><a href="#">TS Telugu Pandit</a></li>
+                      <li><a href="#">AP School Assistant</a></li>
+                      <li><a href="#">AP Secondary Grade Teachers</a></li>
+                      <li><a href="#">AP Telugu Pandit</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-magazine" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">LIC AAO</a></li>
+                      <li><a href="#">LIC ADO</a></li>
+                      <li><a href="#">LIC Assistant</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-ads" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="#">RRC Group-D</a></li>
+                      <li><a href="#">RRB NTPC </a></li>
+                      <li><a href="#">RRB ALP</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab-app" role="tabpanel">
+                    <ul class="ms-tab-menu-right-container">
+                      <li><a href="ts-sub-inspector.html">TS Police SI</a></li>
+                      <li><a href="ts-constable.html">TS Police Constable </a></li>
+                      <li><a href="#">AP Police SI </a></li>
+                      <li><a href="#">AP Police Constable </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a href="onlineexam.html">Online Exams</a></li>
+          <li class="nav-item dropdown"> <a href="current-affairs.html"> Current Affairs <!--<i class="zmdi zmdi-chevron-down"></i>--></a> </li>
+          <li class="nav-item dropdown"> <a href="current-affairs.html">GK <!--<i class="zmdi zmdi-chevron-down"></i>--></a> </li>
+          <li class="nav-item dropdown"> <a href="studyabroad-details.html">Study Abroad</a> </li>
+          <li class="nav-item dropdown"> <a href="careers.html" data-name="ecommerce">Careers</a> </li>
+          <li class="nav-item dropdown"> <a href="institutes.html" class="nav-link" data-name="ecommerce">Institutes</a> </li>
+        </ul>
+      </div>
+      <a href="#" class="ms-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a> </div>
+    <!-- container --> 
+  </nav>
+  <div class="ms-hero-page-override ms-hero-img-keyboard ms-hero-bg-primary mb-6">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">GK & Current Affairs </h1>
+        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus laboriosam, ut placeat autem itaque, possimus illum dicta enim quia. Quam similique voluptate illo debitis corrupti sunt, vitae dicta officia impedit hic. Perferendis, odit consequuntur. </p>
+      </div>
+      <!--   <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-slash">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Courses</a></li>
+          <li class="breadcrumb-item"><a href="group-1.html">APPSC</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Group-II</li>
+			<li class="breadcrumb-item">Screening Test</li>
+          <li class="breadcrumb-item"><a href="paper-1.html">paper-III</a></li>
+        </ol>
+      </nav>-->
+      
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning btn-raised">Month</button>
+        <button type="button" class="btn btn-warning btn-raised dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-chevron-down right only"></i> <div class="ripple-container"></div></button>
+        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-warning" style="">
+          <li class="dropdown-header">Month</li>
+          <li><a class="dropdown-item" href="appsc-group-I-paper-I.html">Paper – I</a></li>
+          <li><a class="dropdown-item" href="appsc-group-I-paper-II.html">Paper – II</a></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-info btn-raised">Year</button>
+        <button type="button" class="btn btn-info btn-raised dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-chevron-down right only"></i> <div class="ripple-container"></div></button>
+        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-info" style="">
+          <li class="dropdown-header">Year</li>
+          <li><a class="dropdown-item" href="#">Paper – I<div class="ripple-container"></div></a></li>
+          <li><a class="dropdown-item" href="#">Paper – II<div class="ripple-container"></div></a></li>
+          <li><a class="dropdown-item" href="#">Paper – III</a></li>
+          <li><a class="dropdown-item" href="#">Paper – IV</a></li>
+        </ul>
+      </div>
+
+     
+      
+    <div class="col-md-3 pull-right">
+        <select required class="btn btn-info btn-raised">
+          <option value="" disabled selected hidden>Select Language</option>
+          <option value="0">Telugu</option>
+          <option value="1">English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row card-body card-body-big">
+    <div class="col-lg-12">
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Categories</h3>
+        </div>
+        <div class="card-body">
+          <form class="form-horizontal" id="Filters">
+            <div class="row">
+              <div class="col-sm-4">
+                <fieldset>
+                  <div class="form-group no-mt">
+                     <div class="radio no-mb">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value=".smartphone" class="filter" data-filter=".category-1">
+                        <span class="circle"></span><span class="check"></span> International </label>
+                    </div>
+                      <div class="radio no-mb">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value=".tablet" class="filter" data-filter=".category-1">
+                        <span class="circle"></span><span class="check"></span> National </label>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".laptop">
+                        TS/Ap</label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".accessory">
+                        Sports</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="col-sm-4">
+                <fieldset>
+                  <div class="form-group no-mt">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".apple">
+                        Awards</label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".smartphone">
+                        Persons in News</label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".laptop">
+                        places in News</label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".accessory">
+                        Science & Technology</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="col-lg-4">
+                <fieldset>
+                  <div class="form-group no-mt">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".tablet">
+                        Book & Authors</label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".smartphone">
+                        Meetings</label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".samsung">
+                        Special Days</label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=".accessory">
+                        Economy</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card card-primary animated fadeInUp animation-delay-7">
+        <div class="card-header">
+          <h3 class="card-title"><i class="zmdi zmdi-apps"></i> Most Popular</h3>
+        </div>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade active show" id="favorite">
+            <div class="card-body overflow-hidden">
+              <div class="ms-media-list">
+                <div class="media mb-2">
+                  <div class="media-left media-middle"> <a href="#"> <img class="d-flex mr-3 media-object media-object-circle" src="img/demo/p75.jpg" alt="..."> </a> </div>
+                  <div class="media-body"> <a href="#" class="media-heading">Lorem ipsum dolor sit amet in consectetur adipisicing</a>
+                    <div class="media-footer text-small"> <span class="mr-1"><i class="zmdi zmdi-time color-info mr-05"></i> August 8, 2021</span> </div>
+                  </div>
+                </div>
+                <div class="media mb-2">
+                  <div class="media-left media-middle"> <a href="#"> <img class="d-flex mr-3 media-object media-object-circle" src="img/demo/p75.jpg" alt="..."> </a> </div>
+                  <div class="media-body"> <a href="#" class="media-heading">Nemo enim ipsam voluptatem quia voluptas sit aspernatur</a>
+                    <div class="media-footer text-small"> <span class="mr-1"><i class="zmdi zmdi-time color-info mr-05"></i> August 8, 2021</span> </div>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#"> <img class="d-flex mr-3 media-object media-object-circle" src="img/demo/p75.jpg" alt="..."> </a> </div>
+                  <div class="media-body"> <a href="#" class="media-heading">inventore veritatis et vitae quasi architecto beatae </a>
+                    <div class="media-footer text-small"> <span class="mr-1"><i class="zmdi zmdi-time color-info mr-05"></i> August 8, 2021</span> </div>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#"> <img class="d-flex mr-3 media-object media-object-circle" src="img/demo/p75.jpg" alt="..."> </a> </div>
+                  <div class="media-body"> <a href="#" class="media-heading">inventore veritatis et vitae quasi architecto beatae </a>
+                    <div class="media-footer text-small"> <span class="mr-1"><i class="zmdi zmdi-time color-info mr-05"></i> August 8, 2021</span> </div>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#"> <img class="d-flex mr-3 media-object media-object-circle" src="img/demo/p75.jpg" alt="..."> </a> </div>
+                  <div class="media-body"> <a href="#" class="media-heading">inventore veritatis et vitae quasi architecto beatae </a>
+                    <div class="media-footer text-small"><span class="mr-1"><i class="zmdi zmdi-time color-info mr-05"></i> August 8, 2021</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-dark">
+        <div class="card-header">
+          <h2 class="card-title"> Current Affairs Quizzes</h2>
+        </div>
+        <div class="list-group"> <a href="#1a" data-toggle="tab" class="list-group-item">Current Affairs Quiz-October,2021
+          <div class="ripple-container"></div>
+          </a> <a href="#" data-toggle="tab" class="list-group-item">Current Affairs Quiz-September,2021 </a> <a href="#" data-toggle="tab" class="list-group-item"> Current Affairs Quiz-August,2021</a> </div>
+      </div>
+
+      <div class="calendar-wrapper">
+        <button id="btnPrev" type="button">Prev</button>
+          <button id="btnNext" type="button">Next</button>
+        <div id="divCal"></div>
+      </div>
+
+    </div>
+    <div class="col-lg-8">
+      <!-- <div class="col">
+        <div class="row" id="Container">
+          <div class="col-xl-4 col-lg-4 col-md-4 mix laptop apple">
+            <div class="card ms-feature">
+              <div class="card-body overflow-hidden text-center"> <a href="ecommerce-item.html"><img src="img/demo/port4.jpg" alt="" class="img-fluid center-block"></a>
+                <h5 class="text-normal text-center">Nobel Prize in Medicine 2021</h5>
+                <p>Quibusdam aperiam tempora ut blanditiis cumque ab pariatur.</p>
+                <div class="mt-2"> <span class="ms-tag ms-tag-success">More</span> </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb">Just Now</a> </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 mix tablet apple" >
+            <div class="card ms-feature">
+              <div class="card-body overflow-hidden text-center"> <a href="ecommerce-item.html"><img src="img/demo/port2.jpg" alt="" class="img-fluid center-block"></a>
+                <h5 class="text-normal text-center">SC approver ex-gratia policy</h5>
+                <p>Quibusdam aperiam tempora ut blanditiis cumque ab pariatur.</p>
+                <div class="mt-2"> <span class="ms-tag ms-tag-success">More</span> </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb">One Day ago</a> </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 mix accessory samsung">
+            <div class="card ms-feature">
+              <div class="card-body overflow-hidden text-center"> <a href="ecommerce-item.html"><img src="img/demo/port3.jpg" alt="" class="img-fluid center-block"></a>
+                <h5 class="text-normal text-center">India's external debt $570 billion</h5>
+                <p>Quibusdam aperiam tempora ut blanditiis cumque ab pariatur.</p>
+                <div class="mt-2"> <span class="ms-tag ms-tag-success">More</span> </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb">Two days ago</a> </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 mix accessory apple">
+            <div class="card ms-feature">
+              <div class="card-body overflow-hidden text-center"> <a href="ecommerce-item.html"><img src="img/demo/port5.jpg" alt="" class="img-fluid center-block"></a>
+                <h5 class="text-normal text-center">Lewis Hamilton wins Russian Grand Prix 2021</h5>
+                <p>Quibusdam aperiam tempora ut blanditiis cumque ab pariatur.</p>
+                <div class="mt-2"> <span class="ms-tag ms-tag-success">More</span> </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb">28 September</a> </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 mix smartphone samsung">
+            <div class="card ms-feature">
+              <div class="card-body overflow-hidden text-center"> <a href="ecommerce-item.html"><img src="img/demo/port4.jpg" alt="" class="img-fluid center-block"></a>
+                <h5 class="text-normal text-center">Fumio Kishida has become the PM of Japan</h5>
+                <p>Quibusdam aperiam tempora ut blanditiis cumque ab pariatur.</p>
+                <div class="mt-2"> <span class="ms-tag ms-tag-success">More</span> </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb">27 September</a> </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 mix laptop microsoft">
+            <div class="card ms-feature">
+              <div class="card-body overflow-hidden text-center"> <a href="ecommerce-item.html"><img src="img/demo/port2.jpg" alt="" class="img-fluid center-block"></a>
+                <h5 class="text-normal text-center">1.5 million Afghan children at rirk</h5>
+                <p>Quibusdam aperiam tempora ut blanditiis cumque ab pariatur.</p>
+                <div class="mt-2"> <span class="ms-tag ms-tag-success">More</span> </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb">27 September</a> </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <article class="card wow fadeInLeft animation-delay-5 mb-4">
+        <div class="card-body overflow-hidden overflow-hidden">
+          <div class="row">
+            <div class="col-xl-4">
+              <img src="img/demo/port4.jpg" alt="" class="img-fluid mb-4">
+            </div>
+            <div class="col-xl-8">
+              <h3 class="no-mt"><a href="#">Earum delectus libero ipsa temporibus in minus</a></h3>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia  on voluptates elit sit molestias.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <img src="assets/img/demo/avatar50.jpg" alt="" class="rounded-circle mr-1">
+              
+                <a href="javascript:void(0)" class="ms-tag ms-tag-info">Just Now</a>
+              <span class="ml-1 d-none d-sm-inline"><i class="zmdi zmdi-time mr-05 color-info"></i> <span class="color-medium-dark">April 15, 2015</span></span>
+            </div>
+            <div class="col-lg-4 text-right">
+              <a href="javascript:void(0)" class="btn btn-primary btn-raised  animate-icon">Read More <i class="ml-1 no-mr zmdi zmdi-long-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wow fadeInLeft animation-delay-5 mb-4">
+        <div class="card-body overflow-hidden overflow-hidden">
+          <div class="row">
+            <div class="col-xl-4">
+              <img src="img/demo/port4.jpg" alt="" class="img-fluid mb-4">
+            </div>
+            <div class="col-xl-8">
+              <h3 class="no-mt"><a href="#">Earum delectus libero ipsa temporibus in minus</a></h3>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates  inse on voluptates elit sit molestias.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <img src="assets/img/demo/avatar50.jpg" alt="" class="rounded-circle mr-1">
+              
+                <a href="javascript:void(0)" class="ms-tag ms-tag-info">Just Now</a>
+              <span class="ml-1 d-none d-sm-inline"><i class="zmdi zmdi-time mr-05 color-info"></i> <span class="color-medium-dark">April 15, 2015</span></span>
+            </div>
+            <div class="col-lg-4 text-right">
+              <a href="javascript:void(0)" class="btn btn-primary btn-raised animate-icon">Read More <i class="ml-1 no-mr zmdi zmdi-long-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wow fadeInLeft animation-delay-5 mb-4">
+        <div class="card-body overflow-hidden overflow-hidden">
+          <div class="row">
+            <div class="col-xl-4">
+              <img src="img/demo/port4.jpg" alt="" class="img-fluid mb-4">
+            </div>
+            <div class="col-xl-8">
+              <h3 class="no-mt"><a href="#">Earum delectus libero ipsa temporibus in minus</a></h3>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia inse on voluptates elit sit molestias.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <img src="assets/img/demo/avatar50.jpg" alt="" class="rounded-circle mr-1">
+              
+                <a href="javascript:void(0)" class="ms-tag ms-tag-info">Just Now</a>
+              <span class="ml-1 d-none d-sm-inline"><i class="zmdi zmdi-time mr-05 color-info"></i> <span class="color-medium-dark">April 15, 2015</span></span>
+            </div>
+            <div class="col-lg-4 text-right">
+              <a href="javascript:void(0)" class="btn btn-primary btn-raised  animate-icon">Read More <i class="ml-1 no-mr zmdi zmdi-long-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wow fadeInLeft animation-delay-5 mb-4">
+        <div class="card-body overflow-hidden overflow-hidden">
+          <div class="row">
+            <div class="col-xl-4">
+              <img src="img/demo/port4.jpg" alt="" class="img-fluid mb-4">
+            </div>
+            <div class="col-xl-8">
+              <h3 class="no-mt"><a href="#">Earum delectus libero ipsa temporibus in minus</a></h3>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse natuse inse on voluptates elit sit molestias.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <img src="assets/img/demo/avatar50.jpg" alt="" class="rounded-circle mr-1">
+              
+                <a href="javascript:void(0)" class="ms-tag ms-tag-info">Just Now</a>
+              <span class="ml-1 d-none d-sm-inline"><i class="zmdi zmdi-time mr-05 color-info"></i> <span class="color-medium-dark">April 15, 2015</span></span>
+            </div>
+            <div class="col-lg-4 text-right">
+              <a href="javascript:void(0)" class="btn btn-primary btn-raised  animate-icon">Read More <i class="ml-1 no-mr zmdi zmdi-long-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    
+    <!-- Latest Updates right colum --> 
+    
+  </div>
+</div>
+<!-- col-lg-9 --> 
+
+<!-- row --> 
+
+<!-- ms-paper -->
+<div class="clearfix"></div>
+<aside class="ms-footbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ms-footer-col">
+        <div class="ms-footbar-block"> 
+          <!-- <h3 class="ms-footbar-title">Sitemap</h3>-->
+           <ul class="list-unstyled ms-icon-list three_cols">
+              <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+              <li><a href="about.html"><i class="zmdi zmdi-edit"></i>About-Us</a></li>
+              <li><a href="doubts.html"><i class="zmdi zmdi-image-o"></i>Doubts</a></li>
+              <li><a href="#"><i class="zmdi zmdi-case"></i>Online Courses</a></li>
+              <li><a href="#"><i class="zmdi zmdi-time"></i>Video Classes</a></li>
+              <li><a href="page-pricing.html"><i class="zmdi zmdi-money"></i> Practice Exams</a></li>
+              <li><a href="csrpolicy.html"><i class="zmdi zmdi-help"></i> CSR Policy</a></li>
+              <li><a href="#"><i class="zmdi zmdi-lock"></i> Terms & Conditions</a></li>
+              <li><a href="privacy-policy.html"><i class="zmdi zmdi-email"></i> Privacy Policy</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="ms-footbar-block"> 
+          <!--<h3 class="ms-footbar-title">Social Media</h3>-->
+          <div class="ms-footbar-social"> <a href="#" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a> <a href="#" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a> 
+            <!-- <a href="javascript:void(0)" class="btn-circle btn-youtube"><i class="zmdi zmdi-youtube-play"></i></a>--> 
+            <a href="#" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a> <a href="#" class="btn-circle btn-instagram"><i class="zmdi zmdi-instagram"></i></a> 
+            <!--<a href="javascript:void(0)" class="btn-circle btn-github"><i class="zmdi zmdi-github"></i></a>--> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-------------------------footer----------------------------->
+<footer class="ms-footer clearfix">
+  <div class="container">
+    <p class="pull-left">Copyright © 2021 Eenadu All Rights Reserved </p>
+    <p class="pull-right">Powered By Margadarsi Computers</p>
+  </div>
+</footer>
+<div class="btn-back-top"> <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised "><i class="zmdi zmdi-long-arrow-up"></i></a> </div>
+
+<!-------------------------------- slidebar menu-------------------------------- -->
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+  <div class="sb-slidebar-container">
+    <header class="ms-slidebar-header">
+      <div class="ms-slidebar-login"> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account"></i> Login</a> <a href="javascript:void(0)" class="withripple"><i class="zmdi zmdi-account-add"></i> Register</a> </div>
+      <div class="ms-slidebar-title">
+        <form class="search-form">
+          <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+          <label for="search-box-slidebar"><i class="zmdi zmdi-search"></i></label>
+        </form>
+        <div class="ms-slidebar-t"> <span class="ms-logo ms-logo-sm">E</span>
+          <h3><span>EENADU</span></h3>
+        </div>
+      </div>
+    </header>
+    <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+      <li class="card"> <a href="index.html"> <i class="zmdi zmdi-home"></i>Home</a> </li>
+      <li class="card" role="tab" id="sch1"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1"> <i class="zmdi zmdi-home"></i>Courses</a>
+        <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
+          <li role="tab" id="sch"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5">APPSC</a>
+            <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5">
+              <li><a href="appsc-group-I.html">Group-I</a></li>
+              <li><a href="appsc-group-II.html">Group-II</a></li>
+              <li><a href="#">Panchayat Secretary </a></li>
+              <li><a href="#">Group-IV</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch2"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2">TSPSC</a>
+            <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2">
+              <li><a href="home-generic-2.html">Group-I</a></li>
+              <li><a href="home-landing.html">Group-II</a></li>
+              <li><a href="home-generic-2.html">Group-III</a></li>
+              <li><a href="home-landing.html">Group-IV</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch3"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc3" aria-expanded="false" aria-controls="sc2">Banking</a>
+            <ul id="sc3" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch3" parent="#slidebar-menu">
+              <li><a href="sbiclerk.html">SBI Clerk</a></li>
+              <li><a href="#">SBI PO</a></li>
+              <li><a href="#">SBI Specialist Officer</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch4"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc2">UPSC</a>
+            <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4">
+              <li><a href="#">CIVILS</a></li>
+              <li><a href="#">NDA</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch7"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc7" aria-expanded="false" aria-controls="sc7">Insurance</a>
+            <ul id="sc7" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch7">
+              <li><a href="#">LIC AAO</a></li>
+              <li><a href="#">LIC ADO</a></li>
+              <li><a href="#">LIC Assistant</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch6"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc5">DSC</a>
+            <ul id="sc6" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch6">
+              <li><a href="#">TS School Assistant</a></li>
+              <li><a href="#">TS Secondary Grade Teachers</a></li>
+              <li><a href="#">AP Telugu Pandit</a></li>
+              <li><a href="#">AP Secondary Grade Teachers</a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch8"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc9" aria-expanded="false" aria-controls="sc5">Police</a>
+            <ul id="sc9" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch9">
+              <li><a href="ts-sub-inspector.html">TS Police SI</a></li>
+              <li><a href="ts-constable.html">TS Police Constable </a></li>
+              <li><a href="#">AP Police SI </a></li>
+              <li><a href="#">AP Police Constable </a></li>
+            </ul>
+          </li>
+          <li role="tab" id="sch10"> <a class="collapsed" role="button" data-toggle="collapse" href="#sc9" aria-expanded="false" aria-controls="sc5">Railway</a>
+            <ul id="sc10" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch10">
+              <li><a href="#">RRC Group-D</a></li>
+              <li><a href="#">RRB NTPC </a></li>
+              <li><a href="#">RRB ALP</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="card"> <a href="onlineexam.html"> <i class="zmdi zmdi-edit"></i>Online Exams </a> </li>
+      <li class="card"> <a href="current-affairs.html"> <i class="zmdi zmdi-shopping-basket"></i>Current Affairs</a> </li>
+      <li class="card"> <a href="#"> <i class="zmdi zmdi-collection-image-o"></i>GK</a> </li>
+      <li class="card"> <a href="studyabroad.html"> <i class="zmdi zmdi-view-compact"></i>Study Abroad</a> </li>
+      <li class="card"> <a href="careers.html"><i class="zmdi zmdi-link"></i> Careers</a> </li>
+      <li class="card"> <a href="institutes.html"><i class="zmdi zmdi-view-compact"></i> Institutes</a> </li>
+    </ul>
+    <div class="ms-slidebar-social ms-slidebar-block">
+      <h4 class="ms-slidebar-block-title">Social Links</h4>
+      <div class="ms-slidebar-social"> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook"><i class="zmdi zmdi-facebook"></i> <span class="badge-pill badge-pill-pink">12</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> <span class="badge-pill badge-pill-pink">4</span>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google"><i class="zmdi zmdi-google"></i>
+        <div class="ripple-container"></div>
+        </a> <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram"><i class="zmdi zmdi-instagram"></i>
+        <div class="ripple-container"></div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<script src="js/plugins.min.js"></script> 
+<script src="js/app.min.js"></script> 
+<script src="js/configurator.min.js"></script>
+
+<!-- -----------calender script------------- -->
+<script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script> 
+
+    <script>var Cal = function(divId) {
+
+      //Store div id
+      this.divId = divId;
+    
+      // Days of week, starting on Sunday
+      this.DaysOfWeek = [
+        'Sun',
+        'Mon',
+        'Tue',
+        'Wed',
+        'Thu',
+        'Fri',
+        'Sat'
+      ];
+    
+      // Months, stating on January
+      this.Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
+    
+      // Set the current month, year
+      var d = new Date();
+    
+      this.currMonth = d.getMonth();
+      this.currYear = d.getFullYear();
+      this.currDay = d.getDate();
+    
+    };
+    
+    // Goes to next month
+    Cal.prototype.nextMonth = function() {
+      if ( this.currMonth == 11 ) {
+        this.currMonth = 0;
+        this.currYear = this.currYear + 1;
+      }
+      else {
+        this.currMonth = this.currMonth + 1;
+      }
+      this.showcurr();
+    };
+    
+    // Goes to previous month
+    Cal.prototype.previousMonth = function() {
+      if ( this.currMonth == 0 ) {
+        this.currMonth = 11;
+        this.currYear = this.currYear - 1;
+      }
+      else {
+        this.currMonth = this.currMonth - 1;
+      }
+      this.showcurr();
+    };
+    
+    // Show current month
+    Cal.prototype.showcurr = function() {
+      this.showMonth(this.currYear, this.currMonth);
+    };
+    
+    // Show month (year, month)
+    Cal.prototype.showMonth = function(y, m) {
+    
+      var d = new Date()
+      // First day of the week in the selected month
+      , firstDayOfMonth = new Date(y, m, 1).getDay()
+      // Last day of the selected month
+      , lastDateOfMonth =  new Date(y, m+1, 0).getDate()
+      // Last day of the previous month
+      , lastDayOfLastMonth = m == 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
+    
+    
+      var html = '<table>';
+    
+      // Write selected month and year
+      html += '<thead><tr>';
+      html += '<td colspan="7">' + this.Months[m] + ' ' + y + '</td>';
+      html += '</tr></thead>';
+    
+    
+      // Write the header of the days of the week
+      html += '<tr class="days">';
+      for(var i=0; i < this.DaysOfWeek.length;i++) {
+        html += '<td>' + this.DaysOfWeek[i] + '</td>';
+      }
+      html += '</tr>';
+    
+      // Write the days
+      var i=1;
+      do {
+    
+        var dow = new Date(y, m, i).getDay();
+    
+        // If Sunday, start new row
+        if ( dow == 0 ) {
+          html += '<tr>';
+        }
+        // If not Sunday but first day of the month
+        // it will write the last days from the previous month
+        else if ( i == 1 ) {
+          html += '<tr>';
+          var k = lastDayOfLastMonth - firstDayOfMonth+1;
+          for(var j=0; j < firstDayOfMonth; j++) {
+            html += '<td class="not-current">' + k + '</td>';
+            k++;
+          }
+        }
+    
+        // Write the current day in the loop
+        var chk = new Date();
+        var chkY = chk.getFullYear();
+        var chkM = chk.getMonth();
+        if (chkY == this.currYear && chkM == this.currMonth && i == this.currDay) {
+          html += '<td class="today">' + i + '</td>';
+        } else {
+          html += '<td class="normal">' + i + '</td>';
+        }
+        // If Saturday, closes the row
+        if ( dow == 6 ) {
+          html += '</tr>';
+        }
+        // If not Saturday, but last day of the selected month
+        // it will write the next few days from the next month
+        else if ( i == lastDateOfMonth ) {
+          var k=1;
+          for(dow; dow < 6; dow++) {
+            html += '<td class="not-current">' + k + '</td>';
+            k++;
+          }
+        }
+    
+        i++;
+      }while(i <= lastDateOfMonth);
+    
+      // Closes table
+      html += '</table>';
+    
+      // Write HTML to the div
+      document.getElementById(this.divId).innerHTML = html;
+    };
+    
+    // On Load of the window
+    window.onload = function() {
+    
+      // Start calendar
+      var c = new Cal("divCal");			
+      c.showcurr();
+    
+      // Bind next and previous button clicks
+      getId('btnNext').onclick = function() {
+        c.nextMonth();
+      };
+      getId('btnPrev').onclick = function() {
+        c.previousMonth();
+      };
+    }
+    
+    // Get element by id
+    function getId(id) {
+      return document.getElementById(id);
+    }
+    </script>
+    <!-- -----------calender script end------------- -->
+<script src="js/index.js"></script> 
+<script src="js/ecommerce.js"></script>
+</body>
+
+<!-- Mirrored from agmstudio.io/themes/material-style/2.5.2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 May 2021 13:02:11 GMT -->
+</html>
